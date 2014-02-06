@@ -179,7 +179,7 @@ public class Contrib_frag extends Fragment {
                     }
                 } else {
                     if (Contrib_frag.this.contribs==null){
-                        data.putString("contribs", "Or Tyler Broke Something!");
+                        data.putString("contribs", "Or The Split Screen Broke Something!");
                     }
                 }
                 msg.setData(data);

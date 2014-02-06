@@ -25,14 +25,14 @@
     <string name="mobile_data">Du bist nur mit einem mobilen Netzwerk verbunden</string>
     <string name="wifi_rec">W-Lan ist Vorraussetzung!</string>
     <string name="carges">Es könnte Extrakosten durch deinen Provider verursachen! Weiter?</string>
-    <string name="error">Oder Tyler ist schuld!</string>
+    <string name="error">Oder The Split Screen ist schuld!</string>
     <string name="error_serv">Server ist überlastet</string>
     <string name="error_dev">Keine Updates auf dem Server</string>
     <string name="ota_un">Unofficial</string>
     <string name="ota_ni">Nightly</string>
     <string name="ota_st">Stable</string>
     <string name="ota_loc">OTA Will Be Downloaded To:</string>
-    <string name="change_load">Tyler Broke Some Stuff!\nSomeone Fixed Some Stuff!\nSomeone Else Added Some New Stuff!</string>
+    <string name="change_load">The Split Screen Broke Some Stuff!\nSomeone Fixed Some Stuff!\nSomeone Else Added Some New Stuff!</string>
 
     <!-- Notification -->
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Erfahre mehr&lt;/a&gt;</string>

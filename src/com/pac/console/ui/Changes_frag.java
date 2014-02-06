@@ -231,7 +231,7 @@ public class Changes_frag extends Fragment {
                         //Settings.System.putString(Changes_frag.this.getActivity().getContentResolver(), "changes", result);
                     }
                 } else {
-                    data.putString("changes", "Server Down\nOr Tyler Broke Something!");
+                    data.putString("changes", "Server Down\nOr The Split Screen Broke Something!");
                 }
                 changeList = result;
                 msg.setData(data);

@@ -105,7 +105,7 @@ public class RemoteTools {
             final int statusCode = getResponse.getStatusLine().getStatusCode();
 
             if (statusCode != HttpStatus.SC_OK) {
-                Log.e("OTA_TOOLS", "#BLAMETYLER " + statusCode
+                Log.e("OTA_TOOLS", "#BLAMETHESPLITSCREEN " + statusCode
                         + " for URL " + URL);
                 return null;
             }
@@ -118,7 +118,7 @@ public class RemoteTools {
 
         } catch (IOException e) {
             getRequest.abort();
-            Log.e("OTA_TOOLS", "#BLAMETYLER Error for URL " + URL, e);
+            Log.e("OTA_TOOLS", "#BLAMETHESPLITSCREEN Error for URL " + URL, e);
         }
 
         return null;
@@ -161,7 +161,7 @@ public class RemoteTools {
             final int statusCode = getResponse.getStatusLine().getStatusCode();
 
             if (statusCode != HttpStatus.SC_OK) {
-                Log.e("OTA_TOOLS", "#BLAMETYLER " + statusCode
+                Log.e("OTA_TOOLS", "#BLAMETHESPLITSCREEN " + statusCode
                         + " for URL " + URL);
                 return null;
             }
@@ -175,7 +175,7 @@ public class RemoteTools {
 
         } catch (IOException e) {
             getRequest.abort();
-            Log.e("OTA_TOOLS", "#BLAMETYLER Error for URL " + URL, e);
+            Log.e("OTA_TOOLS", "#BLAMETHESPLITSCREEN Error for URL " + URL, e);
         }
 
         return null;
@@ -194,7 +194,7 @@ public class RemoteTools {
             final int statusCode = getResponse.getStatusLine().getStatusCode();
 
             if (statusCode != HttpStatus.SC_OK) {
-                Log.e("OTA_TOOLS", "#BLAMETYLER " + statusCode
+                Log.e("OTA_TOOLS", "#BLAMETHESPLITSCREEN " + statusCode
                         + " for URL " + URL);
                 return null;
             }
@@ -208,7 +208,7 @@ public class RemoteTools {
 
         } catch (IOException e) {
             getRequest.abort();
-            Log.e("OTA_TOOLS", "#BLAMETYLER Error for URL " + URL, e);
+            Log.e("OTA_TOOLS", "#BLAMETHESPLITSCREEN Error for URL " + URL, e);
         }
 
         return null;

@@ -337,7 +337,7 @@ public class OTA_frag extends Fragment {
             if (!zomby){
                 if (intent.getAction().equalsIgnoreCase(
                         DownloadManager.ACTION_DOWNLOAD_COMPLETE)) {
-                    Toast.makeText(context, "Download Complte", Toast.LENGTH_LONG)
+                    Toast.makeText(context, "Download Complete", Toast.LENGTH_LONG)
                     .show();
                 }
             }

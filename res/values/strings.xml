@@ -24,14 +24,14 @@
     <string name="mobile_data">You are Connected to a Mobile Network!</string>
     <string name="wifi_rec">Wifi is recomended!</string>
     <string name="carges">You Provider may Charge Extra! Continue?</string>
-    <string name="error">Or Tyler Broke Something!</string>
+    <string name="error">Or The Split Screen Broke Something!</string>
     <string name="error_serv">Server Is Borked</string>
     <string name="error_dev">No Updates Found on Server</string>
     <string name="ota_un">Unofficial</string>
     <string name="ota_ni">Nightly</string>
     <string name="ota_st">Stable</string>
     <string name="ota_loc">OTA Will Be Downloaded To:</string>
-    <string name="change_load">Tyler Broke Some Stuff!\nSomeone Fixed Some Stuff!\nSomeone Else Added Some New Stuff!</string>
+    <string name="change_load">The Split Screen Broke Some Stuff!\nSomeone Fixed Some Stuff!\nSomeone Else Added Some New Stuff!</string>
 
     <!-- Notification -->
     <string name="main_link">&lt;a href=&quot;http://www.cyanogenmod.org/blog/cmstats-what-it-is-and-why-you-should-opt-in&quot;&gt;Learn More&lt;/a&gt;</string>

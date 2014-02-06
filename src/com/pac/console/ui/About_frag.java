@@ -69,7 +69,7 @@ public class About_frag extends PreferenceFragment {
             startActivity(launchIntents);
 
         } catch (ActivityNotFoundException e){
-            Toast.makeText(this.getActivity(), "#BLAMETYLER - No App Installed Capable of launching This!" , Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getActivity(), "#BLAMETHESPLITSCREEN - No App Installed Capable of launching This!" , Toast.LENGTH_SHORT).show();
         }
 
     }

@@ -243,7 +243,7 @@ public class PacConsole extends Activity {
                 break;
             default:
                 fragment = text_frag
-                .newInstance("\n\n\nThe Devs Done F**ked Up!!!!\n\nI Blame Tyler!\n\nYou need to add and then attach the Fragment!");
+                .newInstance("\n\n\nThe Devs Done F**ked Up!!!!\n\nI Blame The Split Screen!\n\nYou need to add and then attach the Fragment!");
             }
 
             // TODO tag is miffed
