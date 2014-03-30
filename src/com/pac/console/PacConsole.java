@@ -155,19 +155,19 @@ public class PacConsole extends Activity {
                 // handle clicks on the drawer
                 if (mDrawerGameTitles.get(arg2).getViewType() == RowType.LIST_ITEM
                         .ordinal()) {
-                    
+
                     attachFrag(arg2);
                     mDrawerList.setSelection(arg2);
                     poss = arg2;
-                    
+
                 } else if (mDrawerGameTitles.get(arg2).getViewType() == RowType.HEADER_ITEM
                         .ordinal()) {
-                    
-                    // redo the list and update the adapter 
+
+                    // redo the list and update the adapter
                     ((aospHeader)mDrawerGameTitles.get(arg2)).setGroupOpen(!((aospHeader)mDrawerGameTitles.get(arg2)).getGroupOpen());
                     expandList();
                 }
-                
+
             }
 
         });
@@ -178,6 +178,7 @@ public class PacConsole extends Activity {
 
         // LOAD State
         if (!state) {
+            attachFrag(1);
             mDrawerLayout.openDrawer(mDrawerList);
         } else {
             attachFrag(poss);
@@ -186,9 +187,9 @@ public class PacConsole extends Activity {
     }
     /**
      * Some Hacktrickery for the expandable list...
-     * 
+     *
      * this could be better...
-     * 
+     *
      */
     private void expandList(){
          mDrawerGameTitles = new ArrayList<ListArrayItem>();
