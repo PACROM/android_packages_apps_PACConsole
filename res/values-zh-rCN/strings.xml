@@ -41,7 +41,7 @@
     <string name="error">或者分屏弄坏了一些东西！</string>
     <string name="error_serv">服务器崩溃了</string>
     <string name="error_dev">未在服务器上找到更新</string>
-    <string name="ota_un">非官方</string>
+    <string name="ota_un">开发版</string>
     <string name="ota_ni">每夜版</string>
     <string name="ota_st">稳定版</string>
     <string name="ota_loc">OTA 将下载到：</string>
