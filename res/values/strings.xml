@@ -27,7 +27,7 @@
     <string name="error">Or The Split Screen Broke Something!</string>
     <string name="error_serv">Server Is Borked</string>
     <string name="error_dev">No Updates Found on Server</string>
-    <string name="ota_un">Unofficial</string>
+    <string name="ota_un">Dev Build</string>
     <string name="ota_ni">Nightly</string>
     <string name="ota_st">Stable</string>
     <string name="ota_loc">OTA Will Be Downloaded To:</string>
