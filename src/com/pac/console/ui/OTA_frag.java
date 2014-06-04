@@ -166,7 +166,7 @@ public class OTA_frag extends Fragment {
             public void onNothingSelected(AdapterView<?> arg0) {
             }
         });
-        String strtemp = Settings.getString("OTAType", "checks");
+        String strtemp = "checku";
         int typeint = 0;
         if (strtemp.contains("checks")){
             typeint = 2;
