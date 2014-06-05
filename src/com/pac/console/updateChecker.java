@@ -158,7 +158,7 @@ public class updateChecker extends Service {
             // TODO Auto-generated method stub
             SharedPreferences Settings = getSharedPreferences("OTAPrefs", Context.MODE_PRIVATE);
 
-            String out = RemoteTools.checkRom(arg0[0], "checku");
+            String out = RemoteTools.checkRom(arg0[0], Settings.getString("OTAType", "checks"));
             return out;
         }
 

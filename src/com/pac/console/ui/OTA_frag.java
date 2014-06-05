@@ -166,7 +166,7 @@ public class OTA_frag extends Fragment {
             public void onNothingSelected(AdapterView<?> arg0) {
             }
         });
-        String strtemp = "checku";
+        String strtemp = Settings.getString("OTAType", "checks");
         int typeint = 0;
         if (strtemp.contains("checks")){
             typeint = 2;
@@ -303,8 +303,8 @@ public class OTA_frag extends Fragment {
                     String[] results = result.split(",");
                     if (!results[0].contains("#BLAME")) {
                         data.putString("version", results[2]);
-                        String[] dlurl = results[0].split("/");
-                        data.putString("file", dlurl[dlurl.length - 1]);
+//                        String[] dlurl = results[0].split("/");
+                        data.putString("file", results[2]+".zip");// dlurl[dlurl.length - 1]);
                         data.putString("url", results[0]);
                         data.putString("md5", results[3]);
                     } else {
