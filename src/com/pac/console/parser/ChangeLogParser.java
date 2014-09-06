@@ -36,9 +36,9 @@ import com.pac.console.adapters.ListArrayItem;
 
 /**
  * Parser for the PAC changelog json generator!
- * json -> ArrayList<ListArrayItem> 
+ * json -> ArrayList<ListArrayItem>
  * complete with day headers
- * 
+ *
  * @author pvyParts
  *
  */
@@ -79,11 +79,11 @@ public class ChangeLogParser {
             if (!str_date.equals(JSONArray.get(i).getDate().substring(0, 10))){
                 str_date = JSONArray.get(i).getDate().substring(0, 10);
                 changeHeader hold = new changeHeader(JSONArray.get(i).getDate().substring(0, 10));
-                formatedArray.add(hold);				
+                formatedArray.add(hold);
             }
             changeItemType hold2 = new changeItemType();
             hold2.setSHA(JSONArray.get(i).getSHA());
-            hold2.setTitle(JSONArray.get(i).getTittle());
+            hold2.setTitle(JSONArray.get(i).getTitle());
             hold2.setCaption(JSONArray.get(i).getCaption());
             hold2.setDate(JSONArray.get(i).getDate());
             hold2.setAuthor(JSONArray.get(i).getAuthor());

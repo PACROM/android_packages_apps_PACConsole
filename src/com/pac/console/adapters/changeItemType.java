@@ -52,7 +52,7 @@ public class changeItemType implements ListArrayItem {
     public String getSHA(){
         return this.SHA;
     }
-    public String getTittle(){
+    public String getTitle(){
         return this.title;
     }
     public String getCaption(){

@@ -27,4 +27,5 @@ import android.view.View;
 public interface ListArrayItem {
     public int getViewType();
     public View getView(LayoutInflater inflater, View convertView);
+    public String getTitle();
 }

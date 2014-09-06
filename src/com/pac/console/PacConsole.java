@@ -61,7 +61,7 @@ public class PacConsole extends Activity {
     private ArrayList<ListArrayItem> mGameTitles;
     private ArrayList<ListArrayItem> mDrawerGameTitles;
     private ListView mDrawerList;
-    private drawerItemType mSelectedItem;
+    private ListArrayItem mSelectedItem;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private int poss = 0;
@@ -125,7 +125,7 @@ public class PacConsole extends Activity {
             public void onDrawerClosed(View view) {
                 // TODO Update the actionbar title
                 if (mSelectedItem != null) {
-                    getActionBar().setTitle(mSelectedItem.getTittle());
+                    getActionBar().setTitle(mSelectedItem.getTitle());
                 }
 
             }
@@ -265,7 +265,7 @@ public class PacConsole extends Activity {
         // Highlight the selected item, update the title, and close the drawer
         mDrawerList.setItemChecked(possition, true);
 
-        mSelectedItem = (drawerItemType) mGameTitles.get(possition);
+        mSelectedItem = (ListArrayItem) mGameTitles.get(possition);
 
         mDrawerLayout.closeDrawer(mDrawerList);
 

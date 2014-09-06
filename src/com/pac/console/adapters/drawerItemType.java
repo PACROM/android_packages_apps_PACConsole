@@ -61,7 +61,7 @@ public class drawerItemType implements ListArrayItem {
         return this.GROUP;
     }
 
-    public String getTittle() {
+    public String getTitle() {
         return this.title;
     }
 
@@ -169,7 +169,7 @@ public class drawerItemType implements ListArrayItem {
 
         // set the title
         TextView tvTit = (TextView) view.findViewById(id.dli_title);
-        tvTit.setText(this.getTittle());
+        tvTit.setText(this.getTitle());
         // show the caption
         if (this.getCaptionDisplay()) {
             TextView tvCap = (TextView) view.findViewById(id.dli_summary);
