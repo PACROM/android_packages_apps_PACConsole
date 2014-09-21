@@ -5,12 +5,12 @@
   <string name="action_settings">Ajustes</string>
   <string name="hello_world">¡Hola mundo!</string>
   <string name="ota_cur_lbl">Detalles de la Rom actual</string>
-  <string name="ota_avail_lbl">Rom disponible en el servidor</string>
+  <string name="ota_avail_lbl">Detalles del servidor</string>
   <string name="ota_non_pac">Esta no es una rom de PAC</string>
   <string name="ota_download">Descargar Zip</string>
-  <string name="ota_flash">Actualización Rapida</string>
-  <string name="ota_menu_lbl">Actualizaciones OTA de la Rom</string>
-  <string name="ota_menu_cap">Opciones de actualización OTA</string>
+  <string name="ota_flash">Instalar actualización</string>
+  <string name="ota_menu_lbl">Actualizaciones OTA</string>
+  <string name="ota_menu_cap">Opciones de actualización</string>
   <string name="contrib_menu_lbl">Colaboradores de PAC</string>
   <string name="contrib_menu_cap">¿Quién hace esto posible?</string>
   <string name="change_menu_lbl">Cambios de PAC</string>
@@ -65,7 +65,7 @@
   <string name="pref_abt_facebook_cap">Pac-Man la Rom todo en uno @ Facebook</string>
   <string name="pref_abt_facebook_link">https://www.facebook.com/PACmanROMS/</string>
   <string name="ota_checking">Comprobar Ahora!</string>
-  <string name="tv_type_tittle">Tipo de OTA</string>
+  <string name="tv_type_tittle">Tipo de actualizacion</string>
   <string name="chng_title">Cambios:</string>
   <string name="chng_new">Nuevo</string>
 </resources>
