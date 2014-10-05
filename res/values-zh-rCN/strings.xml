@@ -39,6 +39,7 @@
   <string name="pac_stats_warning">启用 PAC 统计将允许非个人数据被提交到 PAC 的开发者以便记录各种设备上的唯一安装。提交的信息包含一个唯一的标识符，而不会涉及您的隐私与个人数据。该数据将在每次启动时被提交。\n\n如您想看一个作为被提交数据的实例，请点击预览数据。</string>
   <string name="enable_reporting_title">启用报告</string>
   <string name="preview_data_title">预览数据</string>
+  <string name="preview_data_summary">%s</string>
   <string name="view_stats_title">查看统计</string>
   <string name="pac_learn_more">了解详情</string>
   <string name="btn_yes">是</string>
@@ -52,9 +53,17 @@
   <string name="preview_romversion_title">ROM 版本</string>
   <string name="pref_abt_head">"PAC-MAN Rom "</string>
   <string name="pref_abt_web">在网络上找到我们</string>
+  <string name="pref_abt_web_cap">pac-rom.com</string>
+  <string name="pref_abt_web_link">http://pac-rom.com</string>
   <string name="pref_abt_irc">在 IRC 上联系我们</string>
+  <string name="pref_abt_irc_cap">Freenode #pac-rom</string>
+  <string name="pref_abt_irc_link">irc://irc.freenode.net:6667/pac-rom</string>
   <string name="pref_abt_google">在 Google+ 上找到我们</string>
+  <string name="pref_abt_google_cap">PAC-man : The AIO Rom @ Google+</string>
+  <string name="pref_abt_google_link">https://plus.google.com/102557242936341392082/</string>
   <string name="pref_abt_facebook">在 Facebook 上找到我们</string>
+  <string name="pref_abt_facebook_cap">PacManTheAioRom @ Facebook</string>
+  <string name="pref_abt_facebook_link">https://www.facebook.com/PACmanROMS/</string>
   <string name="ota_checking">正在检查！</string>
   <string name="tv_type_tittle">所需的 OTA 类型</string>
   <string name="chng_title">更新：</string>
