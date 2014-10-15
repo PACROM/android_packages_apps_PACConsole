@@ -23,7 +23,7 @@
   <string name="ota_avail_lbl">Nowa dostępna wersja:</string>
   <string name="ota_non_pac">To nie jest PAC-man ROM</string>
   <string name="ota_download">Pobierz plik ZIP</string>
-  <string name="ota_flash">Zainstaluj aktualizację</string>
+  <string name="ota_flash">Zastosuj aktualizację</string>
   <string name="ota_menu_lbl">Aktualizacje</string>
   <string name="ota_menu_cap">Sprawdź, czy dostępne są aktualizacje ROMu.</string>
   <string name="contrib_menu_lbl">Współautorzy</string>
