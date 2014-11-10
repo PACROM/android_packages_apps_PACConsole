@@ -15,4 +15,51 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">PAC Konzole</string>
+  <string name="action_settings">Nastavení</string>
+  <string name="hello_world">Ahoj světe!</string>
+  <string name="ota_cur_lbl">Aktuální detaily Rom</string>
+  <string name="ota_avail_lbl">Verze, které jsou dostupné na serveru</string>
+  <string name="ota_non_pac">To není PAC rom</string>
+  <string name="ota_download">Stáhnout Zip</string>
+  <string name="ota_flash">Flash Aktualizace</string>
+  <string name="ota_menu_lbl">OTA Aktualizace Rom</string>
+  <string name="ota_menu_cap">Přepínač OTA Možnosti Aktualizace</string>
+  <string name="contrib_menu_lbl">PAC Přispěvatelé</string>
+  <string name="contrib_menu_cap">Kdo toto umožnil?</string>
+  <string name="change_menu_lbl">PAC seznam změn</string>
+  <string name="about_menu_lbl">O PAC</string>
+  <string name="stat_menu_lbl">PAC Statistiky</string>
+  <string name="stat_menu_cap">Vylepšit tuto ROM pomocí anonymní statistiky hlášení</string>
+  <string name="help_menu_lbl">O PAC</string>
+  <string name="help_menu_cap">Obraťte se na vývojáře a zjistěte další informace!</string>
+  <string name="no_data">Žádné Datové Připojení!\nkontaktujte Zkuste to Později!</string>
+  <string name="mobile_data">Jste Připojeni k Mobilní Síti!</string>
+  <string name="wifi_rec">Doporučuje se WiFi!</string>
+  <string name="carges">Váš poskytovatel vám může účtovat další poplatky! opravdu chcete pokračovat?</string>
+  <string name="error_dev">nenalezeny žádné aktualizace na serveru</string>
+  <string name="ota_un">Vývojářská verze</string>
+  <string name="ota_ni">Plně nevyzkoušená verze</string>
+  <string name="ota_st">Stabilní verze</string>
+  <string name="ota_loc">OTA Budou staženy do:</string>
+  <string name="pac_stats_title">PAC Statistiky</string>
+  <string name="pac_stats_warning_title">O</string>
+  <string name="enable_reporting_title">Povolit odesílání hlášení</string>
+  <string name="preview_data_title">Prohlédnout data</string>
+  <string name="view_stats_title">Zobrazit statistiky</string>
+  <string name="pac_learn_more">Poznejte více</string>
+  <string name="btn_yes">Ano</string>
+  <string name="btn_no">Ne</string>
+  <string name="preview_id_title">Unikátní ID</string>
+  <string name="preview_device_title">Zařízení</string>
+  <string name="preview_version_title">Verze</string>
+  <string name="preview_country_title">Země</string>
+  <string name="preview_romname_title">Název ROM</string>
+  <string name="preview_romversion_title">Verze ROM</string>
+  <string name="pref_abt_head">"PAC-MAN Rom "</string>
+  <string name="pref_abt_google">Najdete nás na Google+</string>
+  <string name="pref_abt_facebook">Najdete nás na Facebooku</string>
+  <string name="chng_title">Změny:</string>
+  <string name="chng_new">NOVÉ</string>
+</resources>

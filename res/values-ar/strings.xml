@@ -15,4 +15,43 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"/>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="action_settings">الإعدادات</string>
+  <string name="hello_world">مرحبا بالعالم!</string>
+  <string name="ota_cur_lbl">تفاصيل الروم الحالية</string>
+  <string name="ota_avail_lbl">البناء متوفر على الخادم</string>
+  <string name="ota_non_pac">هذه ليست PAC rom</string>
+  <string name="ota_download">تحميل ملف zip</string>
+  <string name="ota_flash">تفليش التحديث</string>
+  <string name="ota_menu_lbl">تحديثات الروم عبر الهواء</string>
+  <string name="ota_menu_cap">تبديل خيارات التحديث عبر الهواء</string>
+  <string name="contrib_menu_lbl">المساهمين في PAC</string>
+  <string name="contrib_menu_cap">من الذي جعل هذا ممكنا؟</string>
+  <string name="change_menu_lbl">تقريرات PAC للتغييرات</string>
+  <string name="change_menu_cap">أبرز تغييرات الإصدار!</string>
+  <string name="about_menu_lbl">حول PAC</string>
+  <string name="stat_menu_lbl">إحصائيات PAC</string>
+  <string name="stat_menu_cap">ساهم في جعل هذه الروم أفضل عبر إرسال تبليغات الإحصائيات بدون معلوماتك الشخصية</string>
+  <string name="help_menu_lbl">حول PAC</string>
+  <string name="help_menu_cap">إتصل بالمطورين و احصل على المزيد من المعلومات!</string>
+  <string name="no_data">لا توجد بيانات الاتصال!\nالرجاء حاول مرة أخرى في وقت لاحق!</string>
+  <string name="mobile_data">أنت متصل بشكبة الهاتف الجوال!</string>
+  <string name="wifi_rec">ينصح بإستخدام الواي فاي!</string>
+  <string name="error_dev">لم يتم إيجاد أي تحديثات على الخادم</string>
+  <string name="ota_un">بنية التطوير</string>
+  <string name="ota_ni">النسخه الليلية</string>
+  <string name="ota_st">النسخ المستقرة</string>
+  <string name="ota_loc">سيتم تحميل التحديث في:</string>
+  <string name="btn_yes">نعم</string>
+  <string name="btn_no">لا</string>
+  <string name="preview_id_title">المعرف الوحيد</string>
+  <string name="preview_device_title">الجهاز</string>
+  <string name="preview_version_title">الإصدار</string>
+  <string name="preview_country_title">البلد</string>
+  <string name="preview_romname_title">إسم الروم</string>
+  <string name="preview_romversion_title">إصدارة الروم</string>
+  <string name="pref_abt_head">"روم PAC-MAN"</string>
+  <string name="pref_abt_irc">إتصل بنا عبر IRC</string>
+  <string name="chng_title">التغييرات:</string>
+  <string name="chng_new">جديد</string>
+</resources>
