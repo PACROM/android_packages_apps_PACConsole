@@ -38,17 +38,26 @@
                     android:title="@string/nav_list_demo"
                     android:checkable="true"/>
 
+                <!-- Battery -->
                 <item android:id="@+id/nav_four"
                     android:icon="@drawable/ic_settings_battery"
                     android:title="@string/battery_settings_title"
                     android:checkable="true"/>
 
+                <!-- Clock -->
                 <item android:id="@+id/nav_five"
                     android:icon="@drawable/ic_settings_clock"
                     android:title="@string/clock_setting_title"
                     android:checkable="true"/>
 
+                <!-- Network traffic -->
                 <item android:id="@+id/nav_six"
+                    android:icon="@drawable/ic_settings_network_traffic"
+                    android:title="@string/network_traffic_title"
+                    android:checkable="true"/>
+
+                <!-- Status bar -->
+                <item android:id="@+id/nav_seven"
                     android:icon="@drawable/ic_settings_statusbar"
                     android:title="@string/status_bar_title"
                     android:checkable="true"/>
