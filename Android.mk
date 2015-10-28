@@ -29,7 +29,8 @@ LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-design \
     android-support-v4 \
     android-support-v7-recyclerview \
-    android-support-v7-appcompat
+    android-support-v7-appcompat \
+    org.cyanogenmod.platform.internal
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/v7/appcompat/res
