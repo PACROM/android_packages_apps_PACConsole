@@ -116,4 +116,11 @@
         android:summary="@string/status_bar_custom_header_summary"
         android:defaultValue="false"/>
 
+     <com.pac.console.helpers.SystemSettingSwitchPreference
+        android:key="show_su_indicator"
+        android:title="@string/su_indicator"
+        android:summaryOn="@string/su_indicator_summary_on"
+        android:summaryOff="@string/su_indicator_summary_off"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
