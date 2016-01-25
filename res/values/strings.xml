@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The PAC-ROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="app_name">PAC Console</string>
+    <string name="quagmire">Giggity Goo!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="unknown">Unknown</string>
+    <string name="prefix_build_date">Build Date:&#160;%s</string>
+    <string name="prefix_build_version">Version:&#160;%s</string>
+    <string name="prefix_build_channel">Release Type:&#160;%s</string>
+    <string name="prefix_build_size">Size:&#160;%s</string>
+    <string name="prefix_build_md5">MD5:&#160;%s</string>
+    <string name="prefix_app_version">App Version:&#160;%s</string>
+
+    <string name="update_available">Update available</string>
+
+    <string name="nav_web">Website</string>
+    <string name="nav_gplus">Google+</string>
+    <string name="nav_facebook">Facebook</string>
+
+    <string name="nav_list_demo">List Demo</string>
+    <string name="nav_settings_demo">Settings Demo</string>
+    <string name="nav_sub_menu_demo">Submenu</string>
+
+    <string name="nav_info">Rom Info</string>
+
+</resources>
