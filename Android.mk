@@ -25,16 +25,19 @@ LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
 
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-design \
     android-support-v4 \
+    android-support-v7-recyclerview \
     android-support-v7-appcompat
 
 LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
 LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/v7/appcompat/res
 LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/design/res
+LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/v7/recyclerview/res
 
 LOCAL_AAPT_FLAGS := \
     --auto-add-overlay \
     --extra-packages android.support.v7.appcompat \
-    --extra-packages android.support.design
+    --extra-packages android.support.design \
+    --extra-packages android.support.v7.recyclerview
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
