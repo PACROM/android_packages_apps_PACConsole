@@ -37,6 +37,11 @@
                     android:icon="@drawable/ic_question_mark"
                     android:title="@string/nav_list_demo"
                     android:checkable="true"/><!-- Must include the checkable flag -->
+
+                <item android:id="@+id/nav_four"
+                    android:icon="@drawable/ic_settings_statusbar"
+                    android:title="@string/status_bar_title"
+                    android:checkable="true"/>
             </menu>
         </item>  <!-- End of Sub Menu -->
 

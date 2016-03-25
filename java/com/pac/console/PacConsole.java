@@ -34,6 +34,7 @@ import android.view.MenuItem;
 import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
 import com.pac.console.fragments.SettingsFragment;
+import com.pac.console.fragments.StatusBarFragment;
 
 /**
  * Created by pvyparts on 1/25/16.
@@ -134,7 +135,9 @@ public class PacConsole extends AppCompatActivity
             commitFragment(SettingsFragment.newInstance());
         } else if (id == R.id.nav_three) {
             commitFragment(ListFragmentDemo.newInstance());
-        } /* else if (id == R.id.[MenuID]) {
+        } else if (id == R.id.nav_four) {
+            commitFragment(StatusBarFragment.newInstance());
+        }/* else if (id == R.id.[MenuID]) {
             commitFragment([FragmentType].newInstance()); //TODO or how ever it needs to be created this may change from frag to frag.
         }*/ //TODO this is for the nav draw for when you click an item
 
@@ -163,7 +166,9 @@ public class PacConsole extends AppCompatActivity
             navigationView.setCheckedItem(R.id.nav_two);
         } else if (f instanceof ListFragmentDemo) {
             navigationView.setCheckedItem(R.id.nav_three);   //etCheckedItem(R.id.nav_three);
-        } /* else if (f instanceof [FragmentType]) {
+        } else if (f instanceof StatusBarFragment) {
+            navigationView.setCheckedItem(R.id.nav_four); 
+        }/* else if (f instanceof [FragmentType]) {
             navigationView.setCheckedItem(R.id.[MenuID]);
         } */ //TODO this is for the nav draw highlighting what ever is open specifically on back button
 
