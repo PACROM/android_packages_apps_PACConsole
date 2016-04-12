@@ -17,10 +17,13 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := $(call all-subdir-java-files, java)
-
-LOCAL_SDK_VERSION := current
 LOCAL_PACKAGE_NAME := PACConsole
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_PROGUARD_ENABLED := disabled
+
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_AAPT_INCLUDE_ALL_RESOURCES := true
 
 LOCAL_STATIC_JAVA_LIBRARIES += android-support-design \
@@ -33,16 +36,13 @@ LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/v7/appcompat/res
 LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/design/res
 LOCAL_RESOURCE_DIR += $(TOP)/frameworks/support/v7/recyclerview/res
 
+LOCAL_SRC_FILES := $(call all-subdir-java-files, java)
+
 LOCAL_AAPT_FLAGS := \
     --auto-add-overlay \
     --extra-packages android.support.v7.appcompat \
     --extra-packages android.support.design \
     --extra-packages android.support.v7.recyclerview
 
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
-LOCAL_PRIVILEGED_MODULE := true
-
-LOCAL_CERTIFICATE := shared
 
 include $(BUILD_PACKAGE)
