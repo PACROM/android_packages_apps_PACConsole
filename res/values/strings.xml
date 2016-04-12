@@ -15,14 +15,14 @@
      limitations under the License.
 -->
 <resources>
+    <!-- App -->
     <string name="app_name">PAC Console</string>
     <string name="quagmire">Giggity Goo!</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
 
+    <!-- Version Status -->
     <string name="unknown">Unknown</string>
     <string name="prefix_build_date">Build Date:&#160;%s</string>
     <string name="prefix_build_version">Version:&#160;%s</string>
@@ -30,18 +30,26 @@
     <string name="prefix_build_size">Size:&#160;%s</string>
     <string name="prefix_build_md5">MD5:&#160;%s</string>
     <string name="prefix_app_version">App Version:&#160;%s</string>
+    <string name="nav_info">Rom Info</string>
 
+    <!-- OTA -->
     <string name="update_available">Update available</string>
 
+    <!-- Contact -->
     <string name="nav_web">Website</string>
     <string name="nav_gplus">Google+</string>
     <string name="nav_facebook">Facebook</string>
 
+    <!-- Navigation Menu -->
     <string name="nav_list_demo">List Demo</string>
     <string name="nav_settings_demo">Settings Demo</string>
     <string name="nav_sub_menu_demo">Submenu</string>
 
-    <string name="nav_info">Rom Info</string>
+    <!-- Categories -->
+    <string name="battery_cat">Battery</string>
+    <string name="clock_cat">Clock</string>
+    <string name="general_cat">General</string>
+    <string name="misc_cat">Miscellaneous</string>
 
     <!-- Status bar Settings -->
     <string name="status_bar_title">Status bar</string>
