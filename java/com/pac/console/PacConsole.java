@@ -167,7 +167,7 @@ public class PacConsole extends AppCompatActivity
         } else if (f instanceof ListFragmentDemo) {
             navigationView.setCheckedItem(R.id.nav_three);   //etCheckedItem(R.id.nav_three);
         } else if (f instanceof StatusBarFragment) {
-            navigationView.setCheckedItem(R.id.nav_four); 
+            navigationView.setCheckedItem(R.id.nav_four);
         }/* else if (f instanceof [FragmentType]) {
             navigationView.setCheckedItem(R.id.[MenuID]);
         } */ //TODO this is for the nav draw highlighting what ever is open specifically on back button
