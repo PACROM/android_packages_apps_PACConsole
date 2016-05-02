@@ -35,32 +35,42 @@
         android:entryValues="@array/status_bar_battery_percentage_values" />
 
     <ListPreference
-         android:key="statusbar_battery_bar_list"
-         android:title="@string/battery_bar"
-         android:entries="@array/battery_bar_entries"
-         android:entryValues="@array/battery_bar_values" />
+        android:key="statusbar_battery_bar_list"
+        android:title="@string/battery_bar"
+        android:entries="@array/battery_bar_entries"
+        android:entryValues="@array/battery_bar_values" />
 
-     <net.margaritov.preference.colorpicker.ColorPickerPreference
-         android:key="statusbar_battery_bar_color"
-         android:title="@string/battery_bar_color"
-         android:defaultValue="0xffffffff" />
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="statusbar_battery_bar_color"
+        android:title="@string/battery_bar_color"
+        android:defaultValue="0xffffffff" />
 
-     <ListPreference
-         android:key="statusbar_battery_bar_style"
-         android:title="@string/battery_bar_style_title"
-         android:entries="@array/battery_bar_style_entries"
-         android:entryValues="@array/battery_bar_style_values" />
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="battery_bar_charging_color"
+        android:title="@string/battery_bar_charging_color"
+        android:defaultValue="0xffffffff" />
 
-     <ListPreference
-         android:key="statusbar_battery_bar_thickness"
-         android:title="@string/battery_bar_thickness_title"
-         android:entries="@array/battery_bar_thickness_entries"
-         android:entryValues="@array/battery_bar_thickness_values" />
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="battery_bar_battery_low_color"
+        android:title="@string/battery_bar_battery_low_color"
+        android:defaultValue="0xffffffff" />
+
+    <ListPreference
+        android:key="statusbar_battery_bar_style"
+        android:title="@string/battery_bar_style_title"
+        android:entries="@array/battery_bar_style_entries"
+        android:entryValues="@array/battery_bar_style_values" />
+
+    <ListPreference
+        android:key="statusbar_battery_bar_thickness"
+        android:title="@string/battery_bar_thickness_title"
+        android:entries="@array/battery_bar_thickness_entries"
+        android:entryValues="@array/battery_bar_thickness_values" />
 
     <com.pac.console.helpers.SystemSettingSwitchPreference
-         android:key="statusbar_battery_bar_animate"
-         android:title="@string/battery_bar_animate_title"
-         android:summary="@string/battery_bar_animate_summary" />
+        android:key="statusbar_battery_bar_animate"
+        android:title="@string/battery_bar_animate_title"
+        android:summary="@string/battery_bar_animate_summary" />
 
     <!-- Clock -->
     <PreferenceCategory android:title="@string/clock_cat" />

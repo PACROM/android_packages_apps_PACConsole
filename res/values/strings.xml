@@ -130,10 +130,13 @@
     <string name="battery_bar_top_nav_bar">Top of navigation bar</string>
     <string name="battery_bar_bottom_nav_bar">Bottom of navigation bar</string>
     <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_charging_color">Battery bar charging color</string>
+    <string name="battery_bar_battery_low_color">Battery bar low battery color</string>
     <string name="battery_bar_cat">Battery bar style</string>
     <string name="battery_bar_style_title">Battery bar alignment</string>
     <string name="battery_bar_regular">Regular</string>
     <string name="battery_bar_center_mirrored">Center-mirrored</string>
+    <string name="battery_bar_reversed">Reversed</string>
     <string name="battery_bar_thickness_title">Battery bar thickness</string>
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion!</string>
