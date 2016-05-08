@@ -39,6 +39,10 @@
     <string name="nav_web">Website</string>
     <string name="nav_gplus">Google+</string>
     <string name="nav_facebook">Facebook</string>
+    <string name="nav_twitter">Twitter</string>
+    <string name="nav_instagram">Instagram</string>
+    <string name="nav_github">GitHub</string>
+    <string name="nav_gerrit">Gerrit</string>
 
     <!-- Navigation Menu -->
     <string name="nav_list_demo">List Demo</string>

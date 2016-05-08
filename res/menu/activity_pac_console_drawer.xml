@@ -51,16 +51,32 @@
         <menu>
             <item
                 android:id="@+id/com_web"
-                android:icon="@drawable/ic_question_mark"
+                android:icon="@drawable/ic_contact_home"
                 android:title="@string/nav_web" />
             <item
                 android:id="@+id/com_gplus"
-                android:icon="@drawable/ic_question_mark"
+                android:icon="@drawable/ic_contact_google"
                 android:title="@string/nav_gplus" />
             <item
                 android:id="@+id/com_facebook"
-                android:icon="@drawable/ic_question_mark"
+                android:icon="@drawable/ic_contact_facebook"
                 android:title="@string/nav_facebook" />
+            <item
+                android:id="@+id/com_twitter"
+                android:icon="@drawable/ic_contact_twitter"
+                android:title="@string/nav_twitter" />
+            <item
+                android:id="@+id/com_instagram"
+                android:icon="@drawable/ic_contact_instagram"
+                android:title="@string/nav_instagram" />
+            <item
+                android:id="@+id/com_github"
+                android:icon="@drawable/ic_contact_github"
+                android:title="@string/nav_github" />
+            <item
+                android:id="@+id/com_gerrit"
+                android:icon="@drawable/ic_contact_gerrit"
+                android:title="@string/nav_gerrit" />
         </menu>
     </item> <!-- End of Comms Menu -->
 

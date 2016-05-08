@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The PAC-ROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="?android:attr/colorAccent"
+        android:pathData="M19.22,1 L4.78,1 A3.78,3.78,0,0,0,1,4.78 L1,19.22 A3.78,3.78,0,0,0,4.78,23
+L19.22,23 A3.78,3.78,0,0,0,23,19.22 L23,4.78 A3.78,3.78,0,0,0,19.22,1 Z
+M10.88,15.62 L8.88,15.62 L8.88,17.62 L6.88,17.62 L6.88,15.62 L4.88,15.62
+L4.88,13.62 L6.88,13.62 L6.88,11.62 L8.88,11.62 L8.88,13.62 L10.88,13.62
+L10.88,15.62 Z M10.88,8.38 L4.88,8.38 L4.88,6.38 L10.88,6.38 L10.88,8.38 Z
+M19.11,15.62 L17.11,15.62 L17.11,17.62 L15.11,17.62 L15.11,15.62 L13.11,15.62
+L13.11,13.62 L15.11,13.62 L15.11,11.62 L17.11,11.62 L17.11,13.62 L19.11,13.62
+L19.11,15.62 Z M19.11,8.38 L13.11,8.38 L13.11,6.38 L19.11,6.38 L19.11,8.38 Z" />
+</vector>

@@ -128,9 +128,17 @@ public class PacConsole extends AppCompatActivity
         } else if (id == R.id.com_web) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pac-rom.com")));
         } else if (id == R.id.com_gplus) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pac-rom.com"))); //todo get the correct links
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://gplus.pac-rom.com")));
         } else if (id == R.id.com_facebook) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pac-rom.com"))); //todo get the correct links
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://facebook.pac-rom.com")));
+        } else if (id == R.id.com_twitter) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://twitter.pac-rom.com")));
+        } else if (id == R.id.com_instagram) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.pac-rom.com")));
+        } else if (id == R.id.com_github) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://github.pac-rom.com")));
+        } else if (id == R.id.com_gerrit) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://review.pac-rom.com")));
         } else if (id == R.id.nav_two) {
             commitFragment(SettingsFragment.newInstance());
         } else if (id == R.id.nav_three) {

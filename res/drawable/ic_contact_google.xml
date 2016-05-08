@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The PAC-ROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="?android:attr/colorAccent"
+        android:pathData="M11.12,8.59 C11.12,7.49,10.46,5.29,8.81,5.29 C8.15,5.29,7.38,5.73,7.38,7.16
+S8,10.35,9.58,10.35 A1.69,1.69,0,0,0,11.12,8.59 L11.12,8.59 Z M10.46,14
+L10.13,14 A8.12,8.12,0,0,0,8.13,14.33 A2,2,0,0,0,6.5,16.18
+C6.5,17.39,7.6,18.6,9.8,18.6 A2.41,2.41,0,0,0,12.44,16.4
+C12.44,15.63,11.89,15.08,10.44,13.98 L10.44,13.98 Z M20.8,1 L3.2,1
+A2.21,2.21,0,0,0,1,3.2 L1,20.8 A2.21,2.21,0,0,0,3.2,23 L20.8,23
+A2.21,2.21,0,0,0,23,20.8 L23,3.2 A2.21,2.21,0,0,0,20.8,1 L20.8,1 Z M8.8,19.92
+C5.72,19.92,4.29,18.16,4.29,16.62 A2.9,2.9,0,0,1,6,14 A7.31,7.31,0,0,1,9.4,13
+A1.48,1.48,0,0,1,9,11.89 A1,1,0,0,1,9.11,11.34 L8.7,11.34
+A3.36,3.36,0,0,1,5.18,8 C5.18,6.13,6.61,4,9.69,4 L14.31,4 L14,4.41 L13.23,5.18
+L13.12,5.29 L12.33,5.29 A3.31,3.31,0,0,1,13.33,7.71 A3.3,3.3,0,0,1,11.57,10.71
+A0.93,0.93,0,0,0,11.13,11.48 A0.74,0.74,0,0,0,11.57,12.13
+A2.57,2.57,0,0,0,12.12,12.46 C13,13.12,14.22,13.89,14.22,15.65
+C14.22,17.65,12.79,19.94,8.83,19.94 L8.83,19.94 Z M19.7,12 L17.5,12 L17.5,14.2
+L16.4,14.2 L16.4,12 L14.2,12 L14.2,10.9 L16.4,10.9 L16.4,8.7 L17.5,8.7
+L17.5,10.9 L19.7,10.9 L19.7,12 Z M19.7,12" />
+</vector>
