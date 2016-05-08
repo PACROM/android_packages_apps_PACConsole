@@ -17,8 +17,6 @@ package com.pac.console.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -27,17 +25,13 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.provider.Settings;
-import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.EditText;
 
 import com.pac.console.R;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 import cyanogenmod.providers.CMSettings;
 
@@ -163,7 +157,6 @@ public class StatusBarFragment extends PreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        AlertDialog dialog;
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mStatusBarClock) {
             int clockStyle = Integer.parseInt((String) newValue);
@@ -196,37 +189,7 @@ public class StatusBarFragment extends PreferenceFragment
         } else if (preference ==  mStatusBarDateFormat) {
             int index = mStatusBarDateFormat.findIndexOfValue((String) newValue);
             if (index == STATUS_BAR_DATE_DATE_FORMAT_INDEX) {
-                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                alert.setTitle(R.string.status_bar_date_string_edittext_title);
-                alert.setMessage(R.string.status_bar_date_string_edittext_summary);
-                final EditText input = new EditText(getActivity());
-                String oldText = Settings.System.getString(
-                    getActivity().getContentResolver(),
-                    Settings.System.STATUS_BAR_DATE_FORMAT);
-                if (oldText != null) {
-                    input.setText(oldText);
-                }
-                alert.setView(input);
-                alert.setPositiveButton(R.string.menu_save, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogInterface, int whichButton) {
-                        String value = input.getText().toString();
-                        if (value.equals("")) {
-                            return;
-                        }
-                        Settings.System.putString(getActivity().getContentResolver(),
-                            Settings.System.STATUS_BAR_DATE_FORMAT, value);
-
-                        return;
-                    }
-                });
-                alert.setNegativeButton(R.string.menu_cancel,
-                    new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialogInterface, int which) {
-                        return;
-                    }
-                });
-                dialog = alert.create();
-                dialog.show();
+                createClockDateDialog();
             } else {
                 if ((String) newValue != null) {
                     Settings.System.putString(getActivity().getContentResolver(),
@@ -295,6 +258,40 @@ public class StatusBarFragment extends PreferenceFragment
             mStatusBarDateStyle.setEnabled(true);
             mStatusBarDateFormat.setEnabled(true);
         }
+    }
+
+    private void createClockDateDialog() {
+        AlertDialog dialog;
+        AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+        alert.setTitle(R.string.status_bar_date_string_edittext_title);
+        alert.setMessage(R.string.status_bar_date_string_edittext_summary);
+        final EditText input = new EditText(getActivity());
+        String oldText = Settings.System.getString(
+                getActivity().getContentResolver(),
+                Settings.System.STATUS_BAR_DATE_FORMAT);
+        if (oldText != null) {
+            input.setText(oldText);
+        }
+        alert.setView(input);
+        alert.setPositiveButton(R.string.menu_save, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int whichButton) {
+                String value = input.getText().toString();
+                if (value.equals("")) {
+                    return;
+                }
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.STATUS_BAR_DATE_FORMAT, value);
+                return;
+            }
+        });
+        alert.setNegativeButton(R.string.menu_cancel,
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialogInterface, int which) {
+                    return;
+                }
+            });
+        dialog = alert.create();
+        dialog.show();
     }
 
     private void parseClockDateFormats() {
