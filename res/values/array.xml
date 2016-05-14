@@ -14,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="values" translatable="false">
         <item>1</item>
         <item>2</item>
@@ -165,12 +165,12 @@
         <item>3</item>
     </string-array>
 
-    <!-- Battery bar -->
+    <!-- Status bar - Battery bar -->
     <string-array name="battery_bar_entries">
-        <item>Hide</item>
-        <item>Statusbar</item>
-        <item>Top of navbar</item>
-        <item>Bottom of navbar</item>
+        <item>@string/battery_bar_hidden</item>
+        <item>@string/battery_bar_top_status_bar</item>
+        <item>@string/battery_bar_top_nav_bar</item>
+        <item>@string/battery_bar_bottom_nav_bar</item>
     </string-array>
 
     <string-array name="battery_bar_values" translatable="false">
@@ -181,8 +181,8 @@
     </string-array>
 
     <string-array name="battery_bar_style_entries">
-        <item>Regular</item>
-        <item>Center-mirrored</item>
+        <item>@string/battery_bar_regular</item>
+        <item>@string/battery_bar_center_mirrored</item>
     </string-array>
 
     <string-array name="battery_bar_style_values" translatable="false">

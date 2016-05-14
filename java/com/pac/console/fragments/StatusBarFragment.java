@@ -24,13 +24,13 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.EditText;
 
 import com.pac.console.R;
+import com.pac.console.helpers.SystemSettingSwitchPreference;
 
 import java.util.Date;
 
@@ -51,11 +51,11 @@ public class StatusBarFragment extends PreferenceFragment
     private static final String STATUS_BAR_DATE_FORMAT = "status_bar_date_format";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-    private static final String PREF_BATT_BAR = "battery_bar_list";
-    private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
-    private static final String PREF_BATT_BAR_COLOR = "battery_bar_color";
-    private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
-    private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
+    private static final String STATUS_BAR_BATT_BAR = "statusbar_battery_bar_list";
+    private static final String STATUS_BAR_BAR_STYLE = "statusbar_battery_bar_style";
+    private static final String STATUS_BAR_BAR_COLOR = "statusbar_battery_bar_color";
+    private static final String STATUS_BAR_BAR_WIDTH = "statusbar_battery_bar_thickness";
+    private static final String STATUS_BAR_ANIMATE = "statusbar_battery_bar_animate";
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
 
@@ -76,7 +76,7 @@ public class StatusBarFragment extends PreferenceFragment
     private ListPreference mBatteryBar;
     private ListPreference mBatteryBarStyle;
     private ListPreference mBatteryBarThickness;
-    private SwitchPreference mBatteryBarChargingAnimation;
+    private SystemSettingSwitchPreference mBatteryBarChargingAnimation;
     private ColorPickerPreference mBatteryBarColor;
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
@@ -100,34 +100,37 @@ public class StatusBarFragment extends PreferenceFragment
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent =
                 (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
-        mBatteryBar = (ListPreference) findPreference(PREF_BATT_BAR);
+
+        mBatteryBar = (ListPreference) findPreference(STATUS_BAR_BATT_BAR);
         mBatteryBar.setOnPreferenceChangeListener(this);
-        mBatteryBar.setValue((Settings.System.getInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR, 0)) + "");
+        mBatteryBar.setValue((Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_BATTERY_BAR, 0)) + "");
         mBatteryBar.setSummary(mBatteryBar.getEntry());
 
-        mBatteryBarStyle = (ListPreference) findPreference(PREF_BATT_BAR_STYLE);
+        mBatteryBarStyle = (ListPreference) findPreference(STATUS_BAR_BAR_STYLE);
         mBatteryBarStyle.setOnPreferenceChangeListener(this);
         mBatteryBarStyle.setValue((Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_STYLE, 0)) + "");
         mBatteryBarStyle.setSummary(mBatteryBarStyle.getEntry());
 
-        mBatteryBarColor = (ColorPickerPreference) findPreference(PREF_BATT_BAR_COLOR);
+        mBatteryBarColor = (ColorPickerPreference) findPreference(STATUS_BAR_BAR_COLOR);
         mBatteryBarColor.setOnPreferenceChangeListener(this);
         int defaultColor = 0xffffffff;
-        int intColor = Settings.System.getInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR_COLOR, defaultColor);
+        int intColor = Settings.System.getInt(resolver,
+                Settings.System.STATUSBAR_BATTERY_BAR_COLOR, defaultColor);
         String hexColor = String.format("#%08x", (0xffffffff & intColor));
         mBatteryBarColor.setSummary(hexColor);
 
-        mBatteryBarChargingAnimation = (SwitchPreference) findPreference(PREF_BATT_ANIMATE);
-        mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, 0) == 1);
+        mBatteryBarChargingAnimation =
+                (SystemSettingSwitchPreference) findPreference(STATUS_BAR_ANIMATE);
 
-        mBatteryBarThickness = (ListPreference) findPreference(PREF_BATT_BAR_WIDTH);
+        mBatteryBarThickness = (ListPreference) findPreference(STATUS_BAR_BAR_WIDTH);
         mBatteryBarThickness.setOnPreferenceChangeListener(this);
         mBatteryBarThickness.setValue((Settings.System.getInt(resolver,
                 Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1)) + "");
         mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntry());
         updateBatteryBarOptions();
+
         mQuickPulldown = (ListPreference) findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
         mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
 
@@ -293,10 +296,6 @@ public class StatusBarFragment extends PreferenceFragment
             Settings.System.putInt(resolver,
                     Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, val);
             mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntries()[index]);
-            return true;
-        } else if (preference == mBatteryBarChargingAnimation) {
-            boolean val = mBatteryBarChargingAnimation.isChecked();
-            Settings.System.putInt(resolver, Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, val ? 1 : 0);
             return true;
         } else if (preference == mQuickPulldown) {
             int quickPulldown = Integer.valueOf((String) newValue);
