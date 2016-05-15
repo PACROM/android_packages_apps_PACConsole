@@ -48,14 +48,14 @@
 
     <!-- Navigation Menu -->
     <string name="nav_list_demo">List Demo</string>
-    <string name="nav_settings_demo">Settings Demo</string>
+    <string name="nav_settings_demo">Settings</string>
     <string name="nav_sub_menu_demo">Submenu</string>
 
     <!-- Categories -->
-    <string name="battery_cat">Battery</string>
     <string name="clock_cat">Clock</string>
     <string name="general_cat">General</string>
     <string name="misc_cat">Miscellaneous</string>
+    <string name="battery_bar_cat">Battery bar</string>
 
     <!-- Status bar Settings -->
     <string name="status_bar_title">Status bar</string>
@@ -100,18 +100,6 @@
     <string name="status_bar_date_format_custom">Custom java format</string>
     <string name="status_bar_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
     <string name="status_bar_date_string_edittext_summary">Enter string</string>
-    <!-- Status bar - Battery -->
-    <string name="status_bar_battery_style_title">Battery status style</string>
-    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
-    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
-    <string name="status_bar_battery_style_circle">Circle</string>
-    <string name="status_bar_battery_style_text">Text</string>
-    <string name="status_bar_battery_style_hidden">Hidden</string>
-    <!-- Status bar - Battery percentage -->
-    <string name="status_bar_battery_percentage_title">Battery percentage</string>
-    <string name="status_bar_battery_percentage_default">Hidden</string>
-    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
-    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
     <!-- Status bar - Icon blacklist -->
     <string name="status_bar_icons_title">Status bar icons</string>
     <string name="status_bar_icons_summary">Control which status bar icons are shown</string>
@@ -122,7 +110,21 @@
     <string name="su_indicator">Superuser indicator</string>
     <string name="su_indicator_summary_on">Superuser indicator is visible when a session is active</string>
     <string name="su_indicator_summary_off">Toggle to show superuser indicator when a session is active</string>
-    <!-- Status bar - Battery Bar -->
+
+    <!-- Battery - Battery -->
+    <string name="battery_settings_title">Battery</string>
+    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+    <!-- Battery - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+    <!-- Battery - Battery Bar -->
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar">Battery bar location</string>
     <string name="battery_bar_hidden">Hidden</string>
@@ -132,7 +134,6 @@
     <string name="battery_bar_color">Battery bar color</string>
     <string name="battery_bar_charging_color">Battery bar charging color</string>
     <string name="battery_bar_battery_low_color">Battery bar low battery color</string>
-    <string name="battery_bar_cat">Battery bar style</string>
     <string name="battery_bar_style_title">Battery bar alignment</string>
     <string name="battery_bar_regular">Regular</string>
     <string name="battery_bar_center_mirrored">Center-mirrored</string>

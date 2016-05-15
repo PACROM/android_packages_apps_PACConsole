@@ -31,6 +31,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.pac.console.fragments.BatteryFragment;
 import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
 import com.pac.console.fragments.SettingsFragment;
@@ -75,7 +76,6 @@ public class PacConsole extends AppCompatActivity
                         updateNav();
                     }
                 });
-
     }
 
     @Override
@@ -144,11 +144,10 @@ public class PacConsole extends AppCompatActivity
         } else if (id == R.id.nav_three) {
             commitFragment(ListFragmentDemo.newInstance());
         } else if (id == R.id.nav_four) {
+            commitFragment(BatteryFragment.newInstance());
+        } else if (id == R.id.nav_five) {
             commitFragment(StatusBarFragment.newInstance());
-        }/* else if (id == R.id.[MenuID]) {
-            commitFragment([FragmentType].newInstance()); //TODO or how ever it needs to be created this may change from frag to frag.
-        }*/ //TODO this is for the nav draw for when you click an item
-
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -161,7 +160,6 @@ public class PacConsole extends AppCompatActivity
         fragmentManager.beginTransaction().replace(R.id.frag_content_area, fragment).addToBackStack(null).commit();
 
         updateNav();
-
     }
 
     private void updateNav() {
@@ -173,13 +171,12 @@ public class PacConsole extends AppCompatActivity
         } else if (f instanceof SettingsFragment) {
             navigationView.setCheckedItem(R.id.nav_two);
         } else if (f instanceof ListFragmentDemo) {
-            navigationView.setCheckedItem(R.id.nav_three);   //etCheckedItem(R.id.nav_three);
-        } else if (f instanceof StatusBarFragment) {
+            navigationView.setCheckedItem(R.id.nav_three);
+        } else if (f instanceof BatteryFragment) {
             navigationView.setCheckedItem(R.id.nav_four);
-        }/* else if (f instanceof [FragmentType]) {
-            navigationView.setCheckedItem(R.id.[MenuID]);
-        } */ //TODO this is for the nav draw highlighting what ever is open specifically on back button
-
+        } else if (f instanceof StatusBarFragment) {
+            navigationView.setCheckedItem(R.id.nav_five);
+        }
     }
 
 }

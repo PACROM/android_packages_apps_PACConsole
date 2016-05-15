@@ -36,9 +36,6 @@ import java.util.Date;
 
 import cyanogenmod.providers.CMSettings;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
-
-
 public class StatusBarFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
@@ -49,23 +46,8 @@ public class StatusBarFragment extends PreferenceFragment
     private static final String STATUS_BAR_DATE = "status_bar_date";
     private static final String STATUS_BAR_DATE_STYLE = "status_bar_date_style";
     private static final String STATUS_BAR_DATE_FORMAT = "status_bar_date_format";
-    private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
-    private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-    private static final String STATUS_BAR_BATT_BAR = "statusbar_battery_bar_list";
-    private static final String STATUS_BAR_BAR_STYLE = "statusbar_battery_bar_style";
-    private static final String STATUS_BAR_BAR_COLOR = "statusbar_battery_bar_color";
-    private static final String STATUS_BAR_CHARGING_COLOR = "battery_bar_charging_color";
-    private static final String STATUS_BAR_BATTERY_LOW_COLOR_WARNING = "battery_bar_battery_low_color_warning";
-    private static final String STATUS_BAR_BAR_WIDTH = "statusbar_battery_bar_thickness";
-    private static final String STATUS_BAR_ANIMATE = "statusbar_battery_bar_animate";
-    private static final String STATUS_BAR_USE_GRADIENT_COLOR = "statusbar_battery_bar_use_gradient_color";
-    private static final String STATUS_BAR_BAR_LOW_COLOR = "statusbar_battery_bar_low_color";
-    private static final String STATUS_BAR_BAR_HIGH_COLOR = "statusbar_battery_bar_high_color";
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
-
-    private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
-    private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
 
     private static final int STATUS_BAR_DATE_STYLE_LOWERCASE = 1;
     private static final int STATUS_BAR_DATE_STYLE_UPPERCASE = 2;
@@ -76,18 +58,6 @@ public class StatusBarFragment extends PreferenceFragment
     private ListPreference mStatusBarDate;
     private ListPreference mStatusBarDateStyle;
     private ListPreference mStatusBarDateFormat;
-    private ListPreference mStatusBarBattery;
-    private ListPreference mStatusBarBatteryShowPercent;
-    private ListPreference mBatteryBar;
-    private ListPreference mBatteryBarStyle;
-    private ListPreference mBatteryBarThickness;
-    private SystemSettingSwitchPreference mBatteryBarChargingAnimation;
-    private SystemSettingSwitchPreference mBatteryBarUseGradient;
-    private ColorPickerPreference mBatteryBarColor;
-    private ColorPickerPreference mBatteryBarChargingColor;
-    private ColorPickerPreference mBatteryBarBatteryLowColorWarn;
-    private ColorPickerPreference mBatteryBarBatteryLowColor;
-    private ColorPickerPreference mBatteryBarBatteryHighColor;
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
 
@@ -102,81 +72,11 @@ public class StatusBarFragment extends PreferenceFragment
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-        int intColor;
-        int highColor = 0xff99CC00;
-        int lowColor = 0xffff4444;
-        String hexColor;
-
         mStatusBarClock = (ListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
         mStatusBarAmPm = (ListPreference) findPreference(STATUS_BAR_AM_PM);
         mStatusBarDate = (ListPreference) findPreference(STATUS_BAR_DATE);
         mStatusBarDateStyle = (ListPreference) findPreference(STATUS_BAR_DATE_STYLE);
         mStatusBarDateFormat = (ListPreference) findPreference(STATUS_BAR_DATE_FORMAT);
-        mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
-        mStatusBarBatteryShowPercent =
-                (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
-
-        mBatteryBar = (ListPreference) findPreference(STATUS_BAR_BATT_BAR);
-        mBatteryBar.setOnPreferenceChangeListener(this);
-        mBatteryBar.setValue((Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR, 0)) + "");
-        mBatteryBar.setSummary(mBatteryBar.getEntry());
-
-        mBatteryBarStyle = (ListPreference) findPreference(STATUS_BAR_BAR_STYLE);
-        mBatteryBarStyle.setOnPreferenceChangeListener(this);
-        mBatteryBarStyle.setValue((Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_STYLE, 0)) + "");
-        mBatteryBarStyle.setSummary(mBatteryBarStyle.getEntry());
-
-        mBatteryBarColor = (ColorPickerPreference) findPreference(STATUS_BAR_BAR_COLOR);
-        mBatteryBarColor.setOnPreferenceChangeListener(this);
-        int defaultColor = 0xffffffff;
-        intColor = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_COLOR, defaultColor);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
-        mBatteryBarColor.setSummary(hexColor);
-
-        mBatteryBarChargingColor = (ColorPickerPreference) findPreference(STATUS_BAR_CHARGING_COLOR);
-        mBatteryBarChargingColor.setOnPreferenceChangeListener(this);
-        intColor = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_CHARGING_COLOR, defaultColor);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
-        mBatteryBarChargingColor.setSummary(hexColor);
-
-        mBatteryBarBatteryLowColorWarn =
-                (ColorPickerPreference) findPreference(STATUS_BAR_BATTERY_LOW_COLOR_WARNING);
-        mBatteryBarBatteryLowColorWarn.setOnPreferenceChangeListener(this);
-        intColor = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_BATTERY_LOW_COLOR_WARNING, defaultColor);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
-        mBatteryBarBatteryLowColorWarn.setSummary(hexColor);
-
-        mBatteryBarUseGradient =
-                (SystemSettingSwitchPreference) findPreference(STATUS_BAR_USE_GRADIENT_COLOR);
-
-        mBatteryBarBatteryLowColor = (ColorPickerPreference) findPreference(STATUS_BAR_BAR_LOW_COLOR);
-        mBatteryBarBatteryLowColor.setOnPreferenceChangeListener(this);
-        intColor = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_LOW_COLOR, defaultColor);
-        hexColor = String.format("#%08x", (0xffff4444 & lowColor));
-        mBatteryBarBatteryLowColor.setSummary(hexColor);
-
-        mBatteryBarBatteryHighColor = (ColorPickerPreference) findPreference(STATUS_BAR_BAR_HIGH_COLOR);
-        mBatteryBarBatteryHighColor.setOnPreferenceChangeListener(this);
-        intColor = Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_HIGH_COLOR, highColor);
-        hexColor = String.format("#%08x", (0xff99CC00 & intColor));
-        mBatteryBarBatteryHighColor.setSummary(hexColor);
-
-        mBatteryBarChargingAnimation =
-                (SystemSettingSwitchPreference) findPreference(STATUS_BAR_ANIMATE);
-
-        mBatteryBarThickness = (ListPreference) findPreference(STATUS_BAR_BAR_WIDTH);
-        mBatteryBarThickness.setOnPreferenceChangeListener(this);
-        mBatteryBarThickness.setValue((Settings.System.getInt(resolver,
-                Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1)) + "");
-        mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntry());
-        updateBatteryBarOptions();
 
         mQuickPulldown = (ListPreference) findPreference(STATUS_BAR_QUICK_QS_PULLDOWN);
         mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
@@ -217,19 +117,6 @@ public class StatusBarFragment extends PreferenceFragment
         }
 
         parseClockDateFormats();
-
-        int batteryStyle = CMSettings.System.getInt(resolver,
-                CMSettings.System.STATUS_BAR_BATTERY_STYLE, 0);
-        mStatusBarBattery.setValue(String.valueOf(batteryStyle));
-        mStatusBarBattery.setSummary(mStatusBarBattery.getEntry());
-        mStatusBarBattery.setOnPreferenceChangeListener(this);
-
-        int batteryShowPercent = CMSettings.System.getInt(resolver,
-                CMSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, 0);
-        mStatusBarBatteryShowPercent.setValue(String.valueOf(batteryShowPercent));
-        mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
-        enableStatusBarBatteryDependents(batteryStyle);
-        mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
 
         int quickPulldown = CMSettings.System.getInt(resolver,
                 CMSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);
@@ -298,84 +185,6 @@ public class StatusBarFragment extends PreferenceFragment
                 }
             }
             return true;
-        } else if (preference == mStatusBarBattery) {
-            int batteryStyle = Integer.valueOf((String) newValue);
-            int index = mStatusBarBattery.findIndexOfValue((String) newValue);
-            CMSettings.System.putInt(
-                    resolver, CMSettings.System.STATUS_BAR_BATTERY_STYLE, batteryStyle);
-            mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
-            enableStatusBarBatteryDependents(batteryStyle);
-            return true;
-        } else if (preference == mStatusBarBatteryShowPercent) {
-            int batteryShowPercent = Integer.valueOf((String) newValue);
-            int index = mStatusBarBatteryShowPercent.findIndexOfValue((String) newValue);
-            CMSettings.System.putInt(
-                    resolver, CMSettings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, batteryShowPercent);
-            mStatusBarBatteryShowPercent.setSummary(
-                    mStatusBarBatteryShowPercent.getEntries()[index]);
-            return true;
-         } else if (preference == mBatteryBarColor) {
-            String hex = ColorPickerPreference.convertToARGB(Integer
-                    .valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUSBAR_BATTERY_BAR_COLOR, intHex);
-            return true;
-        } else if (preference == mBatteryBarChargingColor) {
-            String hex = ColorPickerPreference.convertToARGB(Integer
-                    .valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_BAR_CHARGING_COLOR, intHex);
-            return true;
-        } else if (preference == mBatteryBarBatteryLowColorWarn) {
-            String hex = ColorPickerPreference.convertToARGB(Integer
-                    .valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_BAR_BATTERY_LOW_COLOR_WARNING, intHex);
-            return true;
-        } else if (preference == mBatteryBarBatteryLowColor) {
-            String hex = ColorPickerPreference.convertToARGB(Integer
-                    .valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_BAR_LOW_COLOR, intHex);
-            return true;
-        } else if (preference == mBatteryBarBatteryHighColor) {
-            String hex = ColorPickerPreference.convertToARGB(Integer
-                    .valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_BATTERY_BAR_HIGH_COLOR, intHex);
-            return true;
-        } else if (preference == mBatteryBar) {
-            int val = Integer.valueOf((String) newValue);
-            int index = mBatteryBar.findIndexOfValue((String) newValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUSBAR_BATTERY_BAR, val);
-            mBatteryBar.setSummary(mBatteryBar.getEntries()[index]);
-            updateBatteryBarOptions();
-            return true;
-        } else if (preference == mBatteryBarStyle) {
-            int val = Integer.valueOf((String) newValue);
-            int index = mBatteryBarStyle.findIndexOfValue((String) newValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUSBAR_BATTERY_BAR_STYLE, val);
-            mBatteryBarStyle.setSummary(mBatteryBarStyle.getEntries()[index]);
-            return true;
-        } else if (preference == mBatteryBarThickness) {
-            int val = Integer.valueOf((String) newValue);
-            int index = mBatteryBarThickness.findIndexOfValue((String) newValue);
-            Settings.System.putInt(resolver,
-                    Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, val);
-            mBatteryBarThickness.setSummary(mBatteryBarThickness.getEntries()[index]);
-            return true;
         } else if (preference == mQuickPulldown) {
             int quickPulldown = Integer.valueOf((String) newValue);
             CMSettings.System.putInt(
@@ -389,39 +198,6 @@ public class StatusBarFragment extends PreferenceFragment
             return true;
         }
         return false;
-    }
-
-    private void enableStatusBarBatteryDependents(int batteryIconStyle) {
-        if (batteryIconStyle == STATUS_BAR_BATTERY_STYLE_HIDDEN ||
-                batteryIconStyle == STATUS_BAR_BATTERY_STYLE_TEXT) {
-            mStatusBarBatteryShowPercent.setEnabled(false);
-        } else {
-            mStatusBarBatteryShowPercent.setEnabled(true);
-        }
-    }
-
-    private void updateBatteryBarOptions() {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (Settings.System.getInt(resolver,
-            Settings.System.STATUSBAR_BATTERY_BAR, 0) == 0) {
-            mBatteryBarStyle.setEnabled(false);
-            mBatteryBarThickness.setEnabled(false);
-            mBatteryBarChargingAnimation.setEnabled(false);
-            mBatteryBarColor.setEnabled(false);
-            mBatteryBarUseGradient.setEnabled(false);
-            mBatteryBarBatteryHighColor.setEnabled(false);
-            mBatteryBarBatteryLowColor.setEnabled(false);
-            mBatteryBarBatteryLowColorWarn.setEnabled(false);
-        } else {
-            mBatteryBarStyle.setEnabled(true);
-            mBatteryBarThickness.setEnabled(true);
-            mBatteryBarChargingAnimation.setEnabled(true);
-            mBatteryBarColor.setEnabled(true);
-            mBatteryBarUseGradient.setEnabled(true);
-            mBatteryBarBatteryHighColor.setEnabled(true);
-            mBatteryBarBatteryLowColor.setEnabled(true);
-            mBatteryBarBatteryLowColorWarn.setEnabled(true);
-        }
     }
 
     private void updatePulldownSummary(int value) {
@@ -469,14 +245,10 @@ public class StatusBarFragment extends PreferenceFragment
             mStatusBarDate.setEnabled(false);
             mStatusBarDateStyle.setEnabled(false);
             mStatusBarDateFormat.setEnabled(false);
-            mBatteryBarChargingColor.setEnabled(false);
-            mBatteryBarBatteryLowColor.setEnabled(false);
         } else {
             mStatusBarDate.setEnabled(true);
             mStatusBarDateStyle.setEnabled(true);
             mStatusBarDateFormat.setEnabled(true);
-            mBatteryBarChargingColor.setEnabled(true);
-            mBatteryBarBatteryLowColor.setEnabled(true);
         }
     }
 
