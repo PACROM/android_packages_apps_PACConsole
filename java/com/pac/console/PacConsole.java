@@ -32,6 +32,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.pac.console.fragments.BatteryFragment;
+import com.pac.console.fragments.ClockFragment;
 import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
 import com.pac.console.fragments.SettingsFragment;
@@ -146,6 +147,8 @@ public class PacConsole extends AppCompatActivity
         } else if (id == R.id.nav_four) {
             commitFragment(BatteryFragment.newInstance());
         } else if (id == R.id.nav_five) {
+            commitFragment(ClockFragment.newInstance());
+        } else if (id == R.id.nav_six) {
             commitFragment(StatusBarFragment.newInstance());
         }
 
@@ -174,8 +177,10 @@ public class PacConsole extends AppCompatActivity
             navigationView.setCheckedItem(R.id.nav_three);
         } else if (f instanceof BatteryFragment) {
             navigationView.setCheckedItem(R.id.nav_four);
-        } else if (f instanceof StatusBarFragment) {
+        } else if (f instanceof ClockFragment) {
             navigationView.setCheckedItem(R.id.nav_five);
+        } else if (f instanceof StatusBarFragment) {
+            navigationView.setCheckedItem(R.id.nav_six);
         }
     }
 
