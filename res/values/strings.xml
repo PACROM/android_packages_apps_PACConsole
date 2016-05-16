@@ -157,4 +157,7 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
 
+    <!-- PAC SeekbarPreference -->
+    <string name="seekbar_default">Default</string>
+
 </resources>
