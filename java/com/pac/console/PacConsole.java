@@ -70,6 +70,7 @@ public class PacConsole extends AppCompatActivity
 
         commitFragment(mInfoFrag);
         navigationView.setCheckedItem(R.id.nav_updates);
+        hideMenuItems();
 
         getFragmentManager().addOnBackStackChangedListener(
                 new FragmentManager.OnBackStackChangedListener() {
@@ -90,6 +91,7 @@ public class PacConsole extends AppCompatActivity
                 super.onBackPressed();
             } else {
                 getFragmentManager().popBackStack();
+                updateNav();
             }
         }
     }
@@ -171,17 +173,32 @@ public class PacConsole extends AppCompatActivity
 
         if (f instanceof InfoFragment) {
             navigationView.setCheckedItem(R.id.nav_updates);
+            getSupportActionBar().setTitle(R.string.nav_info);
         } else if (f instanceof SettingsFragment) {
             navigationView.setCheckedItem(R.id.nav_two);
+            getSupportActionBar().setTitle(R.string.nav_settings_demo);
         } else if (f instanceof ListFragmentDemo) {
             navigationView.setCheckedItem(R.id.nav_three);
+            getSupportActionBar().setTitle(R.string.nav_list_demo);
         } else if (f instanceof BatteryFragment) {
             navigationView.setCheckedItem(R.id.nav_four);
+            getSupportActionBar().setTitle(R.string.battery_settings_title);
         } else if (f instanceof ClockFragment) {
             navigationView.setCheckedItem(R.id.nav_five);
+            getSupportActionBar().setTitle(R.string.clock_setting_title);
         } else if (f instanceof StatusBarFragment) {
             navigationView.setCheckedItem(R.id.nav_six);
+            getSupportActionBar().setTitle(R.string.status_bar_title);
         }
+    }
+
+    // Hide unused items
+    private void hideMenuItems() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu navigationMenu = navigationView.getMenu();
+
+        navigationMenu.findItem(R.id.nav_two).setVisible(false);
+        navigationMenu.findItem(R.id.nav_three).setVisible(false);
     }
 
 }
