@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2016 The PAC-ROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <path
+        android:fillColor="#f00000"
+        android:pathData="M277.016,409.828 C242.882,373.406,254.019,313.136,265.321,297.193
+C282.809,269.882,318.661,264.022,336.799,283.153
+C343.316,290.026,350.63,290.888,357.564,292.423
+C366.602,294.421,376.377,288.743,390.391,289.511
+C418.567,291.673,425.851,305.226,430.072,315.661
+C437.865,334.154,434.564,379.377,409.253,409.441
+C391.655,430.348,326.46,462.575,277.016,409.828 Z" />
+    <path
+        android:fillColor="#f00000"
+        android:pathData="M127.375,375.662 C40,345.327,83.089,246.169,104.277,229.745
+C129.293,208.428,165.385,212.735,176.951,236.049
+C181.111,244.434,187.849,247.276,194.015,250.663
+C202.066,255.075,213.141,252.333,226.321,256.938
+C252.638,266.794,255.504,281.782,256.381,292.938
+C259.4,325.183,220.099,407.836,127.372,375.662 Z" />
+    <path
+        android:fillColor="#684100"
+        android:pathData="M419.034,75.0378 C331.167,61.2568,212.35,141.765,188.027,249.192
+C188.027,249.192,191.942,251.887,192.206,251.131
+C203.416,218.98,212.933,198.918,232.188,174.308
+C260.555,138.05,279.349,121.936,323.767,101.177
+C347.685,89.9968,381.046,77.8678,411.456,86.5338
+C401.006,93.0318,393.281,104.007,388.992,109.626
+C365.908,139.866,351.937,173.646,350.36,210.906
+C349.237,237.385,351.9,266.67,352.919,293.225
+C356.14,293.623,356.812,294.025,359.972,293.351
+C351.382,241.688,349.618,184.187,380.617,136.339
+C390.422,121.21,404.041,106.358,422.271,96.0398
+C428.511,92.5008,428.336,92.7158,429.784,89.6218
+C423.995,77.0158,422.496,75.5048,419.034,75.0378 Z" />
+</vector>
