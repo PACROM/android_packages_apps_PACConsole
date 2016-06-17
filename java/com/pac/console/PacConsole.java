@@ -88,7 +88,7 @@ public class PacConsole extends AppCompatActivity
             drawer.closeDrawer(Gravity.LEFT);
         } else {
             int count = getFragmentManager().getBackStackEntryCount();
-            if (count == 0) {
+            if (count == 1) {
                 super.onBackPressed();
             } else {
                 getFragmentManager().popBackStack();
@@ -165,7 +165,8 @@ public class PacConsole extends AppCompatActivity
     private void commitFragment(Fragment fragment) {
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.popBackStack();
-        fragmentManager.beginTransaction().replace(R.id.frag_content_area, fragment).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frag_content_area, fragment)
+                .addToBackStack(null).commit();
 
         updateNav();
     }
