@@ -35,6 +35,7 @@ import com.pac.console.fragments.BatteryFragment;
 import com.pac.console.fragments.ClockFragment;
 import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
+import com.pac.console.fragments.LockscreenFragment;
 import com.pac.console.fragments.NetworkTrafficFragment;
 import com.pac.console.fragments.SettingsFragment;
 import com.pac.console.fragments.StatusBarFragment;
@@ -152,8 +153,10 @@ public class PacConsole extends AppCompatActivity
         } else if (id == R.id.nav_five) {
             commitFragment(ClockFragment.newInstance());
         } else if (id == R.id.nav_six) {
-            commitFragment(NetworkTrafficFragment.newInstance());
+            commitFragment(LockscreenFragment.newInstance());
         } else if (id == R.id.nav_seven) {
+            commitFragment(NetworkTrafficFragment.newInstance());
+        } else if (id == R.id.nav_eight) {
             commitFragment(StatusBarFragment.newInstance());
         }
 
@@ -190,11 +193,14 @@ public class PacConsole extends AppCompatActivity
         } else if (f instanceof ClockFragment) {
             navigationView.setCheckedItem(R.id.nav_five);
             getSupportActionBar().setTitle(R.string.clock_setting_title);
-        } else if (f instanceof NetworkTrafficFragment) {
+        } else if (f instanceof LockscreenFragment) {
             navigationView.setCheckedItem(R.id.nav_six);
+            getSupportActionBar().setTitle(R.string.lock_screen_title);
+        } else if (f instanceof NetworkTrafficFragment) {
+            navigationView.setCheckedItem(R.id.nav_seven);
             getSupportActionBar().setTitle(R.string.network_traffic_title);
         } else if (f instanceof StatusBarFragment) {
-            navigationView.setCheckedItem(R.id.nav_seven);
+            navigationView.setCheckedItem(R.id.nav_eight);
             getSupportActionBar().setTitle(R.string.status_bar_title);
         }
     }

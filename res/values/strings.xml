@@ -162,6 +162,12 @@
     <!-- PAC SeekbarPreference -->
     <string name="seekbar_default">Default</string>
 
+    <!-- Lockscreen Settings -->
+    <string name="lock_screen_title">Lock screen</string>
+    <!-- Current on Lockscreen -->
+    <string name="lock_screen_show_current">Charging current</string>
+    <string name="lock_screen_show_current_summary">Show charging current rate on lock screen</string>
+
     <!-- Status bar - Network traffic -->
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
