@@ -17,21 +17,46 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- App -->
+  <string name="navigation_drawer_open">Navigationsleiste öffnen</string>
+  <string name="navigation_drawer_close">Navigationsleiste schließen</string>
+  <string name="action_settings">Einstellungen</string>
   <string name="menu_save">Speichern</string>
   <string name="menu_discard">Verwerfen</string>
   <string name="menu_cancel">Abbrechen</string>
   <string name="menu_ok">Ok</string>
   <!-- Version Status -->
   <string name="unknown">Unbekannt</string>
+  <string name="prefix_build_date">Build-Datum: %s</string>
+  <string name="prefix_build_version">Version: %s</string>
+  <string name="prefix_build_channel">Veröffentlichungs Typ: %s</string>
+  <string name="prefix_build_size">Größe: %s</string>
+  <string name="prefix_build_md5">MD5: %s</string>
+  <string name="prefix_app_version">App Version: %s</string>
+  <string name="nav_info">Rom-Info</string>
   <!-- OTA -->
+  <string name="update_available">Update verfügbar</string>
   <!-- Contact -->
+  <string name="nav_web">Website</string>
+  <string name="nav_gplus">Google+</string>
+  <string name="nav_instagram">Instagram</string>
+  <string name="nav_github">GitHub</string>
+  <string name="nav_gerrit">Gerrit</string>
   <!-- Navigation Menu -->
+  <string name="nav_settings_demo">Einstellungen</string>
+  <string name="nav_sub_menu_demo">Untermenü</string>
   <!-- Categories -->
   <string name="clock_cat">Uhrzeit</string>
   <string name="general_cat">Allgemein</string>
   <string name="misc_cat">Diverses</string>
+  <string name="battery_bar_cat">Batterie Leiste</string>
   <!-- Status bar Settings -->
   <string name="status_bar_title">Statusleiste</string>
+  <string name="status_bar_toggle_brightness">Helligkeitssteuerung</string>
+  <string name="status_bar_toggle_brightness_summary">Helligkeit durch Wischen über die Statusleiste ändern</string>
+  <string name="status_bar_notif_count_title">Benachrichtigungszähler anzeigen</string>
+  <string name="status_bar_notif_count_summary">Anzahl der ungelesenen Benachrichtigungen in der Statusleiste anzeigen</string>
+  <string name="status_bar_quick_qs_pulldown_title">Schnelles runterziehen</string>
+  <string name="status_bar_quick_qs_pulldown_summary">Herunterziehen der Benachrichtigungsleiste am %1$s Rand öffnet die Schnelleinstellungen</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">Links</string>
   <string name="status_bar_quick_qs_pulldown_summary_right">Rechts</string>
   <string name="status_bar_quick_qs_pulldown_off">Deaktiviert</string>
@@ -44,19 +69,61 @@
   <string name="smart_pulldown_persistent">keine dauerhaften</string>
   <string name="smart_pulldown_all">keine verwerfbaren oder dauerhaften</string>
   <!-- Status bar - Icon blacklist -->
+  <string name="status_bar_icons_title">Statusleisten Symbole</string>
+  <string name="status_bar_icons_summary">Statusleiste Symbole die angezeigt werden</string>
   <!-- Status bar - Time Contexual Header -->
+  <string name="status_bar_custom_header_title">Zeitabhängige Kopfzeile</string>
   <string name="status_bar_custom_header_summary">Kopfzeilenbild aktivieren</string>
   <!-- Status bar - Superuser indicator -->
+  <string name="su_indicator">Superuser-Indikator</string>
+  <string name="su_indicator_summary_on">Superuser-Indikator anzeigen, wenn eine Root-Session aktiv ist</string>
+  <string name="su_indicator_summary_off">Superuser-Indikator anzeigen, wenn eine Root-Session aktiv ist</string>
   <!-- Battery Settings -->
   <string name="battery_settings_title">Akku</string>
+  <string name="status_bar_battery_style_title">Stil des Akkusymbols</string>
+  <string name="status_bar_battery_style_icon_portrait">Symbol (Hochformat)</string>
+  <string name="status_bar_battery_style_icon_landscape">Symbol (Querformat)</string>
+  <string name="status_bar_battery_style_circle">Kreis</string>
+  <string name="status_bar_battery_style_text">Text</string>
+  <string name="status_bar_battery_style_hidden">Versteckt</string>
   <!-- Battery - Battery percentage -->
+  <string name="status_bar_battery_percentage_title">Akku Prozentanzeige</string>
+  <string name="status_bar_battery_percentage_default">Versteckt</string>
+  <string name="status_bar_battery_percentage_text_inside">Innerhalb des Symbols</string>
+  <string name="status_bar_battery_percentage_text_next">Neben dem Symbol</string>
   <!-- Battery - Battery Bar -->
+  <string name="battery_bar_title">Batterie Leiste</string>
+  <string name="battery_bar">Position der Akkuleiste</string>
+  <string name="battery_bar_hidden">Versteckt</string>
+  <string name="battery_bar_top_status_bar">Über der Statusleiste</string>
+  <string name="battery_bar_top_nav_bar">Über der Navigationsleiste</string>
+  <string name="battery_bar_bottom_nav_bar">Unter der Navigationsleiste</string>
+  <string name="battery_bar_color">Akkuleisten-Farbe</string>
+  <string name="battery_bar_charging_color">Farbe beim Ladevorgang</string>
+  <string name="battery_bar_battery_low_color">Farbe bei niedrigem Akkustand</string>
+  <string name="battery_bar_style_title">Ausrichtung der Akkuleiste</string>
+  <string name="battery_bar_regular">Standard</string>
+  <string name="battery_bar_center_mirrored">Mittig gespiegelt</string>
+  <string name="battery_bar_reversed">Umgekehrt</string>
+  <string name="battery_bar_thickness_title">Dicke der Akkuleiste</string>
+  <string name="battery_bar_animate_title">Lade-Animation</string>
+  <string name="battery_bar_animate_summary">Die Ladeanimation kann die Nutzererfahrung beeinträchtigen. Aktivierung auf eigene Verantwortung!</string>
+  <string name="battery_bar_use_gradient_color">Farbverlauf verwenden</string>
+  <string name="battery_bar_gradient_color_summary">Verwenden Sie Farbverlauf als Maßstab für den Akkustand</string>
+  <string name="battery_bar_high_color">Farbe bei hohem Akkustand\"</string>
+  <string name="battery_bar_low_color">Farbe bei niedrigem Akkustand\"</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Uhrzeit</string>
+  <string name="status_bar_clock_style_title">Uhr Format</string>
   <string name="status_bar_clock_style_right">Rechts</string>
   <string name="status_bar_clock_style_left">Links</string>
+  <string name="status_bar_clock_style_center">Zentrieren</string>
+  <string name="status_bar_clock_style_hidden">Versteckt</string>
+  <string name="status_bar_am_pm_title">AM/PM-Format</string>
+  <string name="status_bar_am_pm_info">24-Stunden Format ist aktiviert</string>
   <string name="status_bar_am_pm_normal">Normal</string>
   <string name="status_bar_am_pm_small">Klein</string>
+  <string name="status_bar_am_pm_hidden">Versteckt</string>
   <!--Clock - Date -->
   <string name="status_bar_date_title">Datum</string>
   <string name="status_bar_date_none">Versteckt (Voreinstellung)</string>
@@ -78,7 +145,10 @@
   <!-- PAC SeekbarPreference -->
   <string name="seekbar_default">Standardmäßig</string>
   <!-- Lockscreen Settings -->
+  <string name="lock_screen_title">Bildschirmsperre</string>
   <!-- Current on Lockscreen -->
+  <string name="lock_screen_show_current">Ladestrom</string>
+  <string name="lock_screen_show_current_summary">Ladestrom auf Sperrbildschirm anzeigen</string>
   <!-- Status bar - Network traffic -->
   <!-- Network traffic -->
   <string name="network_traffic_title">Netzwerkverkehr</string>
