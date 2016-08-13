@@ -251,6 +251,11 @@ public class PacConsole extends AppCompatActivity
 
         navigationMenu.findItem(R.id.nav_settings).setVisible(false);
         navigationMenu.findItem(R.id.nav_demo).setVisible(false);
+
+        if (!ChangelogFragment.fileExists()){
+            navigationMenu.findItem(R.id.nav_changelog).setVisible(false);
+        }
+
     }
 
 }

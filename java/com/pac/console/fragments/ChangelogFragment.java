@@ -32,15 +32,27 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.SecurityException;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 public class ChangelogFragment extends Fragment {
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
+
+    public static boolean fileExists(){
+        try {
+            File file = new File(CHANGELOG_PATH);
+            return file.exists();
+        } catch ( SecurityException e ) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
     public static ChangelogFragment newInstance(){
         return new ChangelogFragment();
