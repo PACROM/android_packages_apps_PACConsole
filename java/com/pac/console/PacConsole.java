@@ -32,6 +32,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.pac.console.fragments.BatteryFragment;
+import com.pac.console.fragments.Changelog;
 import com.pac.console.fragments.ClockFragment;
 import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
@@ -127,7 +128,8 @@ public class PacConsole extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        
+        //TODO case this...
         if (id == R.id.nav_updates) {
             commitFragment(mInfoFrag);
         } else if (id == R.id.com_web) {
@@ -158,6 +160,8 @@ public class PacConsole extends AppCompatActivity
             commitFragment(NetworkTrafficFragment.newInstance());
         } else if (id == R.id.nav_eight) {
             commitFragment(StatusBarFragment.newInstance());
+        } else if (id == R.id.nav_changes) {
+            commitFragment(Changelog.newInstance());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -174,6 +178,7 @@ public class PacConsole extends AppCompatActivity
         updateNav();
     }
 
+    //TODO Find a betterway to do this
     private void updateNav() {
         Fragment f = getFragmentManager().findFragmentById(R.id.frag_content_area);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -202,6 +207,9 @@ public class PacConsole extends AppCompatActivity
         } else if (f instanceof StatusBarFragment) {
             navigationView.setCheckedItem(R.id.nav_eight);
             getSupportActionBar().setTitle(R.string.status_bar_title);
+        } else if (f instanceof Changelog) {
+            navigationView.setCheckedItem(R.id.nav_changes);
+            getSupportActionBar().setTitle(R.string.changes_title);
         }
     }
 

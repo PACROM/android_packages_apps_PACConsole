@@ -67,6 +67,12 @@
                     android:icon="@drawable/ic_settings_statusbar"
                     android:title="@string/status_bar_title"
                     android:checkable="true"/>
+                    
+                <!-- Status bar -->
+                <item android:id="@+id/nav_changes"
+                    android:icon="@drawable/ic_question_mark"
+                    android:title="@string/changes_title"
+                    android:checkable="true"/>
             </menu>
         </item>  <!-- End of Sub Menu -->
 

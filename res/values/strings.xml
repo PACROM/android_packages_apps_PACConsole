@@ -192,8 +192,7 @@
     <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
 
     <!-- Changelog -->
-    <string name="changelog_pac_title">Changelog</string>
+    <string name="changes_title">Changelog</string>
     <string name="changelog_pac_error">Unable to load changelog</string>
     <string name="changelog_pac_summary">Check to see changes in current build</string>
-
 </resources>
