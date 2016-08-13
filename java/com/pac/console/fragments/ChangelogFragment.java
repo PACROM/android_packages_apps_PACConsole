@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2016 PAC-ROM
+ * Copyright (C) 2015 crDroid Android
+ * Copyright (C) 2016 The PAC-ROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,19 +38,18 @@ import java.io.InputStreamReader;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public class Changelog extends Fragment {
+public class ChangelogFragment extends Fragment {
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
-    
-    public static Changelog newInstance(){
-        return new Changelog();
+
+    public static ChangelogFragment newInstance(){
+        return new ChangelogFragment();
     }
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
         InputStreamReader inputReader = null;
-        String text = null;
         StringBuilder data = new StringBuilder();
         Pattern p = Pattern.compile("([a-f0-9]{7})\\s\\s(.*)\\s\\s\\[(.*)\\]"); //(?dms)
         Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_\\-]+/)+)");
@@ -60,12 +60,9 @@ public class Changelog extends Fragment {
 
             inputReader = new FileReader(CHANGELOG_PATH);
             while ((numRead = inputReader.read(tmp)) >= 0) {
-
                 data.append(tmp, 0, numRead);
             }
-//            text = data.toString();
         } catch (IOException e) {
-//            text = getString(R.string.changelog_pac_error);
         } finally {
             try {
                 if (inputReader != null) {

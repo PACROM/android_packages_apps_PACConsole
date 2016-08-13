@@ -19,12 +19,12 @@
     <group android:checkableBehavior="all"> <!-- Main Menu -->
         <item
             android:id="@+id/nav_updates"
-            android:icon="@drawable/ic_question_mark"
+            android:icon="@drawable/ic_settings_info"
             android:title="@string/nav_info"
             android:checkable="true"/>
 
         <item
-            android:id="@+id/nav_two"
+            android:id="@+id/nav_settings"
             android:icon="@drawable/ic_question_mark"
             android:title="@string/nav_settings_demo"
             android:checkable="true"/>
@@ -33,45 +33,45 @@
             android:id="@+id/navigation_subheader"
             android:title="@string/nav_settings_demo"> <!-- Sub Menu -->
             <menu>
-                <item android:id="@+id/nav_three"
+                <item android:id="@+id/nav_demo"
                     android:icon="@drawable/ic_question_mark"
                     android:title="@string/nav_list_demo"
                     android:checkable="true"/>
 
                 <!-- Battery -->
-                <item android:id="@+id/nav_four"
+                <item android:id="@+id/nav_battery"
                     android:icon="@drawable/ic_settings_battery"
                     android:title="@string/battery_settings_title"
                     android:checkable="true"/>
 
+                <!-- Changelog -->
+                <item android:id="@+id/nav_changelog"
+                    android:icon="@drawable/ic_settings_changelog"
+                    android:title="@string/changes_title"
+                    android:checkable="true"/>
+
                 <!-- Clock -->
-                <item android:id="@+id/nav_five"
+                <item android:id="@+id/nav_clock"
                     android:icon="@drawable/ic_settings_clock"
                     android:title="@string/clock_setting_title"
                     android:checkable="true"/>
 
                 <!-- Lock screen -->
-                <item android:id="@+id/nav_six"
+                <item android:id="@+id/nav_lockscreen"
                     android:icon="@drawable/ic_settings_lockscreen"
                     android:title="@string/lock_screen_title"
                     android:checkable="true"/>
 
                 <!-- Network traffic -->
-                <item android:id="@+id/nav_seven"
+                <item android:id="@+id/nav_traffic"
                     android:icon="@drawable/ic_settings_network_traffic"
                     android:title="@string/network_traffic_title"
                     android:checkable="true"/>
 
                 <!-- Status bar -->
-                <item android:id="@+id/nav_eight"
+                <item android:id="@+id/nav_statusbar"
                     android:icon="@drawable/ic_settings_statusbar"
                     android:title="@string/status_bar_title"
-                    android:checkable="true"/>
-                    
-                <!-- Status bar -->
-                <item android:id="@+id/nav_changes"
-                    android:icon="@drawable/ic_question_mark"
-                    android:title="@string/changes_title"
                     android:checkable="true"/>
             </menu>
         </item>  <!-- End of Sub Menu -->

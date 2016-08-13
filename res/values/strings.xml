@@ -124,6 +124,11 @@
     <string name="battery_bar_high_color">High level color"</string>
     <string name="battery_bar_low_color">Low level color"</string>
 
+    <!-- Changelog -->
+    <string name="changes_title">Changelog</string>
+    <string name="changelog_pac_error">Unable to load changelog</string>
+    <string name="changelog_pac_summary">Check to see changes in current build</string>
+
     <!-- Clock Settings -->
     <string name="clock_setting_title">Clock</string>
     <string name="status_bar_clock_style_title">Clock style</string>
@@ -191,8 +196,4 @@
     <string name="network_traffic_color_reset">Reset color</string>
     <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
 
-    <!-- Changelog -->
-    <string name="changes_title">Changelog</string>
-    <string name="changelog_pac_error">Unable to load changelog</string>
-    <string name="changelog_pac_summary">Check to see changes in current build</string>
 </resources>

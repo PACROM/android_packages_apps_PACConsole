@@ -32,7 +32,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.pac.console.fragments.BatteryFragment;
-import com.pac.console.fragments.Changelog;
+import com.pac.console.fragments.ChangelogFragment;
 import com.pac.console.fragments.ClockFragment;
 import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
@@ -62,7 +62,8 @@ public class PacConsole extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -128,40 +129,63 @@ public class PacConsole extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        
-        //TODO case this...
-        if (id == R.id.nav_updates) {
-            commitFragment(mInfoFrag);
-        } else if (id == R.id.com_web) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.pac-rom.com")));
-        } else if (id == R.id.com_gplus) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://gplus.pac-rom.com")));
-        } else if (id == R.id.com_facebook) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://facebook.pac-rom.com")));
-        } else if (id == R.id.com_twitter) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://twitter.pac-rom.com")));
-        } else if (id == R.id.com_instagram) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.pac-rom.com")));
-        } else if (id == R.id.com_github) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://github.pac-rom.com")));
-        } else if (id == R.id.com_gerrit) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://review.pac-rom.com")));
-        } else if (id == R.id.nav_two) {
-            commitFragment(SettingsFragment.newInstance());
-        } else if (id == R.id.nav_three) {
-            commitFragment(ListFragmentDemo.newInstance());
-        } else if (id == R.id.nav_four) {
-            commitFragment(BatteryFragment.newInstance());
-        } else if (id == R.id.nav_five) {
-            commitFragment(ClockFragment.newInstance());
-        } else if (id == R.id.nav_six) {
-            commitFragment(LockscreenFragment.newInstance());
-        } else if (id == R.id.nav_seven) {
-            commitFragment(NetworkTrafficFragment.newInstance());
-        } else if (id == R.id.nav_eight) {
-            commitFragment(StatusBarFragment.newInstance());
-        } else if (id == R.id.nav_changes) {
-            commitFragment(Changelog.newInstance());
+
+        switch (id) {
+            case R.id.nav_updates:
+                commitFragment(mInfoFrag);
+                break;
+            case R.id.com_web:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://www.pac-rom.com")));
+                break;
+            case R.id.com_gplus:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://gplus.pac-rom.com")));
+                break;
+            case R.id.com_facebook:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://facebook.pac-rom.com")));
+                break;
+            case R.id.com_twitter:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://twitter.pac-rom.com")));
+                break;
+            case R.id.com_instagram:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://instagram.pac-rom.com")));
+                break;
+            case R.id.com_github:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://github.pac-rom.com")));
+                break;
+            case R.id.com_gerrit:
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://review.pac-rom.com")));
+                break;
+            case R.id.nav_settings:
+                commitFragment(SettingsFragment.newInstance());
+                break;
+            case R.id.nav_demo:
+                commitFragment(ListFragmentDemo.newInstance());
+                break;
+            case R.id.nav_battery:
+                commitFragment(BatteryFragment.newInstance());
+                break;
+            case R.id.nav_changelog:
+                commitFragment(ChangelogFragment.newInstance());
+                break;
+            case R.id.nav_clock:
+                commitFragment(ClockFragment.newInstance());
+                break;
+            case R.id.nav_lockscreen:
+                commitFragment(LockscreenFragment.newInstance());
+                break;
+            case R.id.nav_traffic:
+                commitFragment(NetworkTrafficFragment.newInstance());
+                break;
+            case R.id.nav_statusbar:
+                commitFragment(StatusBarFragment.newInstance());
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -187,29 +211,29 @@ public class PacConsole extends AppCompatActivity
             navigationView.setCheckedItem(R.id.nav_updates);
             getSupportActionBar().setTitle(R.string.nav_info);
         } else if (f instanceof SettingsFragment) {
-            navigationView.setCheckedItem(R.id.nav_two);
+            navigationView.setCheckedItem(R.id.nav_settings);
             getSupportActionBar().setTitle(R.string.nav_settings_demo);
         } else if (f instanceof ListFragmentDemo) {
-            navigationView.setCheckedItem(R.id.nav_three);
+            navigationView.setCheckedItem(R.id.nav_demo);
             getSupportActionBar().setTitle(R.string.nav_list_demo);
         } else if (f instanceof BatteryFragment) {
-            navigationView.setCheckedItem(R.id.nav_four);
+            navigationView.setCheckedItem(R.id.nav_battery);
             getSupportActionBar().setTitle(R.string.battery_settings_title);
+        } else if (f instanceof ChangelogFragment) {
+            navigationView.setCheckedItem(R.id.nav_changelog);
+            getSupportActionBar().setTitle(R.string.changes_title);
         } else if (f instanceof ClockFragment) {
-            navigationView.setCheckedItem(R.id.nav_five);
+            navigationView.setCheckedItem(R.id.nav_clock);
             getSupportActionBar().setTitle(R.string.clock_setting_title);
         } else if (f instanceof LockscreenFragment) {
-            navigationView.setCheckedItem(R.id.nav_six);
+            navigationView.setCheckedItem(R.id.nav_lockscreen);
             getSupportActionBar().setTitle(R.string.lock_screen_title);
         } else if (f instanceof NetworkTrafficFragment) {
-            navigationView.setCheckedItem(R.id.nav_seven);
+            navigationView.setCheckedItem(R.id.nav_traffic);
             getSupportActionBar().setTitle(R.string.network_traffic_title);
         } else if (f instanceof StatusBarFragment) {
-            navigationView.setCheckedItem(R.id.nav_eight);
+            navigationView.setCheckedItem(R.id.nav_statusbar);
             getSupportActionBar().setTitle(R.string.status_bar_title);
-        } else if (f instanceof Changelog) {
-            navigationView.setCheckedItem(R.id.nav_changes);
-            getSupportActionBar().setTitle(R.string.changes_title);
         }
     }
 
@@ -218,8 +242,8 @@ public class PacConsole extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         Menu navigationMenu = navigationView.getMenu();
 
-        navigationMenu.findItem(R.id.nav_two).setVisible(false);
-        navigationMenu.findItem(R.id.nav_three).setVisible(false);
+        navigationMenu.findItem(R.id.nav_settings).setVisible(false);
+        navigationMenu.findItem(R.id.nav_demo).setVisible(false);
     }
 
 }
