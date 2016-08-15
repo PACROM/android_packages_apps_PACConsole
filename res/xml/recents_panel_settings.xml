@@ -35,4 +35,12 @@
         android:defaultValue="3"
         android:dependency="show_clear_all_recents" />
 
+    <!-- Miscellaneous -->
+    <PreferenceCategory android:title="@string/misc_cat" />
+
+    <com.pac.console.helpers.CMSystemSettingSwitchPreference
+        android:key="recents_show_search_bar"
+        android:title="@string/recents_show_searchbar"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
