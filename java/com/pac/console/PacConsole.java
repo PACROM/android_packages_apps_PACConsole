@@ -38,6 +38,7 @@ import com.pac.console.fragments.InfoFragment;
 import com.pac.console.fragments.ListFragmentDemo;
 import com.pac.console.fragments.LockscreenFragment;
 import com.pac.console.fragments.NetworkTrafficFragment;
+import com.pac.console.fragments.RecentsFragment;
 import com.pac.console.fragments.SettingsFragment;
 import com.pac.console.fragments.StatusBarFragment;
 
@@ -183,6 +184,9 @@ public class PacConsole extends AppCompatActivity
             case R.id.nav_traffic:
                 commitFragment(NetworkTrafficFragment.newInstance());
                 break;
+            case R.id.nav_recents:
+                commitFragment(RecentsFragment.newInstance());
+                break;
             case R.id.nav_statusbar:
                 commitFragment(StatusBarFragment.newInstance());
                 break;
@@ -231,6 +235,9 @@ public class PacConsole extends AppCompatActivity
         } else if (f instanceof NetworkTrafficFragment) {
             navigationView.setCheckedItem(R.id.nav_traffic);
             getSupportActionBar().setTitle(R.string.network_traffic_title);
+        } else if (f instanceof RecentsFragment) {
+            navigationView.setCheckedItem(R.id.nav_recents);
+            getSupportActionBar().setTitle(R.string.recent_panel_title);
         } else if (f instanceof StatusBarFragment) {
             navigationView.setCheckedItem(R.id.nav_statusbar);
             getSupportActionBar().setTitle(R.string.status_bar_title);

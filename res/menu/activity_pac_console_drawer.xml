@@ -68,6 +68,12 @@
                     android:title="@string/network_traffic_title"
                     android:checkable="true"/>
 
+                <!-- Recents panel -->
+                <item android:id="@+id/nav_recents"
+                    android:icon="@drawable/ic_settings_recents_panel"
+                    android:title="@string/recent_panel_title"
+                    android:checkable="true"/>
+
                 <!-- Status bar -->
                 <item android:id="@+id/nav_statusbar"
                     android:icon="@drawable/ic_settings_statusbar"
