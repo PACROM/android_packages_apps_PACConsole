@@ -17,30 +17,27 @@
 
 package com.pac.console.fragments;
 
-import android.app.Fragment;
+import android.preference.Preference;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceScreen;
 import android.os.Bundle;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ScrollView;
-import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.SecurityException;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
-public class ChangelogFragment extends Fragment {
+import com.pac.console.R;
+
+public class ChangelogFragment extends PreferenceFragment {
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
 
@@ -59,14 +56,17 @@ public class ChangelogFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        addPreferencesFromResource(R.xml.changelog);
+
+        PreferenceScreen ps = this.getPreferenceScreen();
+
         InputStreamReader inputReader = null;
         StringBuilder data = new StringBuilder();
-        Pattern p = Pattern.compile("([a-f0-9]{7})\\s\\s(.*)\\s\\s\\[(.*)\\]"); //(?dms)
-        Pattern p2 = Pattern.compile("\\s+\\*\\s(([\\w_\\-]+/)+)");
-        Pattern p3 = Pattern.compile("(\\d\\d\\-\\d\\d\\-\\d{4})");
-        try {
+
+                try {
             char tmp[] = new char[2048];
             int numRead;
 
@@ -84,28 +84,73 @@ public class ChangelogFragment extends Fragment {
             }
         }
 
-        SpannableStringBuilder sb = new SpannableStringBuilder(data);
-        Matcher m = p.matcher(data);
-        while (m.find()){
-          sb.setSpan(new ForegroundColorSpan(Color.rgb(255,69,0)),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-          sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(1),m.end(1),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-          sb.setSpan(new ForegroundColorSpan(Color.rgb(255,215,0)),m.start(3), m.end(3), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        }
-        m = p2.matcher(data);
-        while (m.find()){
-          sb.setSpan(new StyleSpan(Typeface.BOLD),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-          sb.setSpan(new ForegroundColorSpan(Color.rgb(255,165,0)),m.start(1),m.end(1),Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        }
-        m = p3.matcher(data);
-        while (m.find()){
-          sb.setSpan(new StyleSpan(Typeface.BOLD+Typeface.ITALIC),m.start(1), m.end(1), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        }
-        final TextView textView = new TextView(getActivity());
-        textView.setText(sb);
+        List<Change> chngs = PassChangelogText(data.toString());
 
-        final ScrollView scrollView = new ScrollView(getActivity());
-        scrollView.addView(textView);
+        long dv = Long.valueOf(chngs.get(0).getmDate()) * 1000;
+        Date date = new Date(dv);
 
-        return scrollView;
+        String lastDate = new SimpleDateFormat("yyyy MM dd").format(date);
+
+        PreferenceCategory pc = new PreferenceCategory(getContext());
+        pc.setTitle(lastDate);
+
+        ps.addPreference(pc);
+
+        for (int i = 0; i < chngs.size() - 1; i++) {
+
+            dv = Long.valueOf(chngs.get(i).getmDate()) * 1000;
+            date = new Date(dv);
+
+            if (!lastDate.equalsIgnoreCase(new SimpleDateFormat("yyyy MM dd").format(date))){
+                lastDate = new SimpleDateFormat("yyyy MM dd").format(date);
+
+                PreferenceCategory holderCat = new PreferenceCategory(getContext());
+                holderCat.setTitle(lastDate);
+                ps.addPreference(holderCat);
+            }
+            Preference holderPref = new Preference(getContext());
+            holderPref.setTitle(chngs.get(i).getCommitText());
+            holderPref.setSummary("android_" + chngs.get(i).getmProject().substring(0, chngs.get(i).getmProject().length() -1).replace("/", "_") + /*" at " + new SimpleDateFormat("hh:mma").format(date) + */" by " + chngs.get(i).getCommitAuth());
+            ps.addPreference(holderPref);
+
+            this.setPreferenceScreen(ps);
+
+        }
+
     }
+
+    private List PassChangelogText(String RawChanges) {
+
+        String[] SplitString = RawChanges.split("\n");
+        List<Change> changes = new ArrayList<>();
+
+        String lastProject = "";
+
+        for (int i = 0; i < SplitString.length - 1; i++) {
+            String SubStr = SplitString[i];
+            if (SubStr.length() > 0) {
+                if (SubStr.startsWith("|*|")) {
+                    // dumped not needed
+                } else if (SubStr.startsWith("project")) {
+                    try {
+                        lastProject = SubStr.split(" ")[1];
+                    } catch (ArrayIndexOutOfBoundsException e) {
+                        e.printStackTrace();
+                        // fail whale...
+                    }
+                } else {
+                    try {
+                        String[] stringChanges = SubStr.split("\\|");
+                        changes.add(new Change(Integer.parseInt(stringChanges[1]), lastProject, stringChanges[0], stringChanges[3], stringChanges[2]));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        Collections.sort(changes);
+
+        return changes;
+    }
+
 }
