@@ -117,6 +117,7 @@
   <string name="battery_bar_gradient_color_summary">Usar cor gradiente como uma escala para o nível da bateria</string>
   <string name="battery_bar_high_color">Cor de alto nível\"</string>
   <string name="battery_bar_low_color">Cor de nível baixo\"</string>
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="clock_setting_title">Relógio</string>
   <string name="status_bar_clock_style_title">Estilo do relógio</string>
@@ -179,4 +180,5 @@
   <string name="network_traffic_color_style">Estilo de cor</string>
   <string name="network_traffic_color_reset">Redefinir a cor</string>
   <string name="network_traffic_color_reset_message">Repor as predefinições da cor de tráfego de rede?</string>
+  <!-- Recents Panel -->
 </resources>

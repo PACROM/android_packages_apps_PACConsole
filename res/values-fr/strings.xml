@@ -42,6 +42,7 @@
   <!-- Battery Settings -->
   <!-- Battery - Battery percentage -->
   <!-- Battery - Battery Bar -->
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="status_bar_clock_style_right">Droite</string>
   <string name="status_bar_clock_style_left">Gauche</string>
@@ -75,4 +76,5 @@
   <string name="show_network_traffic_down">Entrant(s)</string>
   <string name="network_traffic_autohide">Se cache de lui-même</string>
   <string name="network_traffic_autohide_threshold">Seuil d\'inactivité</string>
+  <!-- Recents Panel -->
 </resources>

@@ -114,6 +114,10 @@
   <string name="battery_bar_gradient_color_summary">Utilizar color degradado como una escala para el nivel de batería</string>
   <string name="battery_bar_high_color">Color de nivel alto</string>
   <string name="battery_bar_low_color">Color de nivel bajo</string>
+  <!-- Changelog -->
+  <string name="changes_title">Registro de cambios</string>
+  <string name="changelog_pac_error">No es posible mostrar el registro de cambios</string>
+  <string name="changelog_pac_summary">Comprobar cambios en la construcción actual</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Reloj</string>
   <string name="status_bar_clock_style_title">Estilo de reloj</string>
@@ -173,4 +177,16 @@
   <string name="network_traffic_color_style">Estilo de color</string>
   <string name="network_traffic_color_reset">Restaurar color</string>
   <string name="network_traffic_color_reset_message">¿Restablecer el color al predeterminado?</string>
+  <!-- Recents Panel -->
+  <string name="recent_panel_title">Aplicaciones recientes</string>
+  <string name="show_clear_all_recents_button_title">Botón de borrar todo</string>
+  <string name="show_clear_all_recents_button_summary">Mostrar boton de borrar todo</string>
+  <string name="recents_clear_all_location_title">Posición del botón de borrar todo</string>
+  <string name="recents_clear_all_location_top_right">Arriba a la derecha</string>
+  <string name="recents_clear_all_location_top_left">Arriba a la Izquierda</string>
+  <string name="recents_clear_all_location_top_center">Arriba al centro</string>
+  <string name="recents_clear_all_location_bottom_right">Abajo a la Derecha</string>
+  <string name="recents_clear_all_location_bottom_left">Abajo a la Izquierda</string>
+  <string name="recents_clear_all_location_bottom_center">Abajo al centro</string>
+  <string name="recents_show_searchbar">Mostrar la barra de búsqueda en el menú de recientes</string>
 </resources>

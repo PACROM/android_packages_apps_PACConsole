@@ -30,6 +30,7 @@
   <!-- Battery Settings -->
   <!-- Battery - Battery percentage -->
   <!-- Battery - Battery Bar -->
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <!--Clock - Date -->
   <!-- Color Picker -->
@@ -39,4 +40,5 @@
   <!-- Current on Lockscreen -->
   <!-- Status bar - Network traffic -->
   <!-- Network traffic -->
+  <!-- Recents Panel -->
 </resources>

@@ -112,6 +112,7 @@
   <string name="battery_bar_gradient_color_summary">Verwenden Sie Farbverlauf als Maßstab für den Akkustand</string>
   <string name="battery_bar_high_color">Farbe bei hohem Akkustand\"</string>
   <string name="battery_bar_low_color">Farbe bei niedrigem Akkustand\"</string>
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="clock_setting_title">Uhrzeit</string>
   <string name="status_bar_clock_style_title">Uhr Format</string>
@@ -171,4 +172,5 @@
   <string name="network_traffic_color_style">Farbstil</string>
   <string name="network_traffic_color_reset">Farbe zurücksetzen</string>
   <string name="network_traffic_color_reset_message">Netzwerkverkehrsfarbe auf die Voreinstellungen zurücksetzen?</string>
+  <!-- Recents Panel -->
 </resources>

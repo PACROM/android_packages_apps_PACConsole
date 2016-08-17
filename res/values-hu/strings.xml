@@ -112,6 +112,10 @@
   <string name="battery_bar_gradient_color_summary">Színátmenet használata az akkumulátor töltöttségi szinthez</string>
   <string name="battery_bar_high_color">Magas szint színe</string>
   <string name="battery_bar_low_color">Alacsony szint színe</string>
+  <!-- Changelog -->
+  <string name="changes_title">Változáslista</string>
+  <string name="changelog_pac_error">Nem lehet betölteni a változáslistát</string>
+  <string name="changelog_pac_summary">Ellenőrizze, hogy mik a változások a jelenlegi verzióban</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Óra</string>
   <string name="status_bar_clock_style_title">Óra stílusa</string>
@@ -171,4 +175,15 @@
   <string name="network_traffic_color_style">Szín stílus</string>
   <string name="network_traffic_color_reset">Szín visszaállítása</string>
   <string name="network_traffic_color_reset_message">Hálózati forgalom színeinek visszaállítása alapértelmezettre?</string>
+  <!-- Recents Panel -->
+  <string name="recent_panel_title">Előzmények panel</string>
+  <string name="show_clear_all_recents_button_title">Mindent töröl gomb</string>
+  <string name="show_clear_all_recents_button_summary">Mindent töröl gomb megjelenítése</string>
+  <string name="recents_clear_all_location_title">Mindent töröl gomb helye</string>
+  <string name="recents_clear_all_location_top_right">Jobb fent</string>
+  <string name="recents_clear_all_location_top_left">Bal fent</string>
+  <string name="recents_clear_all_location_top_center">Fent középen</string>
+  <string name="recents_clear_all_location_bottom_right">Jobb lent</string>
+  <string name="recents_clear_all_location_bottom_left">Bal lent</string>
+  <string name="recents_clear_all_location_bottom_center">Lent középen</string>
 </resources>

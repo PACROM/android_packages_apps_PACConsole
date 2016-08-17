@@ -114,6 +114,10 @@
   <string name="battery_bar_gradient_color_summary">Użyj koloru gradientu jako skalę dla poziomu naładowania baterii</string>
   <string name="battery_bar_high_color">Kolor wysokiego poziomu</string>
   <string name="battery_bar_low_color">Kolor niskiego poziomu</string>
+  <!-- Changelog -->
+  <string name="changes_title">Lista zmian</string>
+  <string name="changelog_pac_error">Nie można wczytać listy zmian</string>
+  <string name="changelog_pac_summary">Sprawdź zmiany w bieżącej kompilacji</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Zegar</string>
   <string name="status_bar_clock_style_title">Styl zegara</string>
@@ -173,4 +177,15 @@
   <string name="network_traffic_color_style">Styl koloru</string>
   <string name="network_traffic_color_reset">Przywróć domyślny kolor</string>
   <string name="network_traffic_color_reset_message">Przywrócić domyślny kolor ruchu sieciowego?</string>
+  <!-- Recents Panel -->
+  <string name="recent_panel_title">Ostatnie aplikacje</string>
+  <string name="show_clear_all_recents_button_title">Przycisk \"Wyczyść wszystkie\"</string>
+  <string name="show_clear_all_recents_button_summary">Pokazuj przycisk \"Wyczyść wszystkie ostatnie aplikacje\"</string>
+  <string name="recents_clear_all_location_title">Pozycja przycisku</string>
+  <string name="recents_clear_all_location_top_right">Prawy górny róg</string>
+  <string name="recents_clear_all_location_top_left">Lewy górny róg</string>
+  <string name="recents_clear_all_location_top_center">Wyśrodkowany na górze</string>
+  <string name="recents_clear_all_location_bottom_right">Prawy dolny róg</string>
+  <string name="recents_clear_all_location_bottom_left">Lewy dolny róg</string>
+  <string name="recents_clear_all_location_bottom_center">Wyśrodkowany na dole</string>
 </resources>

@@ -112,6 +112,7 @@
   <string name="battery_bar_gradient_color_summary">Utilizzare la sfumatura di colore come una scala per il livello della batteria</string>
   <string name="battery_bar_high_color">Colore alto livello</string>
   <string name="battery_bar_low_color">Colore basso livello</string>
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="clock_setting_title">Orologio</string>
   <string name="status_bar_clock_style_title">Stile orologio</string>
@@ -171,4 +172,5 @@
   <string name="network_traffic_color_style">Stile colore</string>
   <string name="network_traffic_color_reset">Ripristina colore</string>
   <string name="network_traffic_color_reset_message">Impostare il colore predefinito?</string>
+  <!-- Recents Panel -->
 </resources>

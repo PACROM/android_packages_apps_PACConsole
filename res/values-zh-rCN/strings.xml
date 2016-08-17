@@ -17,21 +17,48 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- App -->
+  <string name="app_name">PAC 控制台</string>
+  <string name="navigation_drawer_open">打开抽屉导航</string>
+  <string name="navigation_drawer_close">关闭导航抽屉</string>
+  <string name="action_settings">设置</string>
   <string name="menu_save">保存</string>
   <string name="menu_discard">撤销</string>
   <string name="menu_cancel">取消</string>
   <string name="menu_ok">确定</string>
   <!-- Version Status -->
   <string name="unknown">未知</string>
+  <string name="prefix_build_date">编译日期︰%s</string>
+  <string name="prefix_build_version">版本： %s</string>
+  <string name="prefix_build_channel">发布类型︰%s</string>
+  <string name="prefix_build_size">大小: %s</string>
+  <string name="prefix_build_md5">MD5:%s</string>
+  <string name="prefix_app_version">应用版本： %s</string>
+  <string name="nav_info">Rom 信息</string>
   <!-- OTA -->
+  <string name="update_available">有可用的更新</string>
   <!-- Contact -->
+  <string name="nav_web">官方网站</string>
+  <string name="nav_gplus">Google+</string>
+  <string name="nav_instagram">Instagram</string>
+  <string name="nav_github">GitHub</string>
+  <string name="nav_gerrit">Gerrit</string>
   <!-- Navigation Menu -->
+  <string name="nav_list_demo">列表演示</string>
+  <string name="nav_settings_demo">设置</string>
+  <string name="nav_sub_menu_demo">子菜单</string>
   <!-- Categories -->
   <string name="clock_cat">时钟</string>
   <string name="general_cat">常规</string>
   <string name="misc_cat">杂项</string>
+  <string name="battery_bar_cat">电量条</string>
   <!-- Status bar Settings -->
   <string name="status_bar_title">状态栏</string>
+  <string name="status_bar_toggle_brightness">亮度控制</string>
+  <string name="status_bar_toggle_brightness_summary">在状态栏滑动调整亮度</string>
+  <string name="status_bar_notif_count_title">显示通知计数</string>
+  <string name="status_bar_notif_count_summary">显示未读通知的数量</string>
+  <string name="status_bar_quick_qs_pulldown_title">快速下拉</string>
+  <string name="status_bar_quick_qs_pulldown_summary">从状态栏的%1$s边缘拉下时直接开启快速设置面板</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">左</string>
   <string name="status_bar_quick_qs_pulldown_summary_right">右</string>
   <string name="status_bar_quick_qs_pulldown_off">关</string>
@@ -44,19 +71,62 @@
   <string name="smart_pulldown_persistent">无持久通知</string>
   <string name="smart_pulldown_all">无可清除或持久通知</string>
   <!-- Status bar - Icon blacklist -->
+  <string name="status_bar_icons_title">状态栏图标</string>
+  <string name="status_bar_icons_summary">控制状态栏显示的图标</string>
   <!-- Status bar - Time Contexual Header -->
+  <string name="status_bar_custom_header_title">时间头部图像</string>
   <string name="status_bar_custom_header_summary">启用通知面板标题图像</string>
   <!-- Status bar - Superuser indicator -->
+  <string name="su_indicator">超级用户指示器</string>
+  <string name="su_indicator_summary_on">当一个会话是活动时超级用户指示器为可见</string>
+  <string name="su_indicator_summary_off">当会话处于活动状态时显示超级用户指示器</string>
   <!-- Battery Settings -->
   <string name="battery_settings_title">电池</string>
+  <string name="status_bar_battery_style_title">电量图标样式</string>
+  <string name="status_bar_battery_style_icon_portrait">立式图标</string>
+  <string name="status_bar_battery_style_icon_landscape">横向图标</string>
+  <string name="status_bar_battery_style_circle">环形电量</string>
+  <string name="status_bar_battery_style_text">文本</string>
+  <string name="status_bar_battery_style_hidden">隐藏</string>
   <!-- Battery - Battery percentage -->
+  <string name="status_bar_battery_percentage_title">电量百分比</string>
+  <string name="status_bar_battery_percentage_default">隐藏</string>
+  <string name="status_bar_battery_percentage_text_inside">图标内</string>
+  <string name="status_bar_battery_percentage_text_next">图标旁</string>
   <!-- Battery - Battery Bar -->
+  <string name="battery_bar_title">电量条</string>
+  <string name="battery_bar">电量条位置</string>
+  <string name="battery_bar_hidden">隐藏</string>
+  <string name="battery_bar_top_status_bar">状态栏顶部</string>
+  <string name="battery_bar_top_nav_bar">导航栏顶部</string>
+  <string name="battery_bar_bottom_nav_bar">导航栏底部</string>
+  <string name="battery_bar_color">电量条颜色</string>
+  <string name="battery_bar_charging_color">电量条颜色 (充电时)</string>
+  <string name="battery_bar_battery_low_color">电量条颜色 (低电量时)</string>
+  <string name="battery_bar_style_title">电量条对齐方式</string>
+  <string name="battery_bar_regular">标准</string>
+  <string name="battery_bar_center_mirrored">中心镜像</string>
+  <string name="battery_bar_reversed">反转</string>
+  <string name="battery_bar_thickness_title">电量条厚度</string>
+  <string name="battery_bar_animate_title">充电动画</string>
+  <string name="battery_bar_animate_summary">充电动画可能会带来较差的用户体验，请自行决定是否启用。</string>
+  <string name="battery_bar_use_gradient_color">使用渐变</string>
+  <string name="battery_bar_gradient_color_summary">使用渐变颜色显示电池电量</string>
+  <string name="battery_bar_high_color">电量充足时的颜色“</string>
+  <string name="battery_bar_low_color">电量不足时的颜色”</string>
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="clock_setting_title">时钟</string>
+  <string name="status_bar_clock_style_title">时钟样式</string>
   <string name="status_bar_clock_style_right">右</string>
   <string name="status_bar_clock_style_left">左</string>
+  <string name="status_bar_clock_style_center">居中</string>
+  <string name="status_bar_clock_style_hidden">隐藏</string>
+  <string name="status_bar_am_pm_title">上午 / 下午样式</string>
+  <string name="status_bar_am_pm_info">24小时制已启用</string>
   <string name="status_bar_am_pm_normal">正常</string>
   <string name="status_bar_am_pm_small">较小</string>
+  <string name="status_bar_am_pm_hidden">隐藏</string>
   <!--Clock - Date -->
   <string name="status_bar_date_title">日期</string>
   <string name="status_bar_date_none">隐藏 (默认值)</string>
@@ -78,7 +148,10 @@
   <!-- PAC SeekbarPreference -->
   <string name="seekbar_default">默认</string>
   <!-- Lockscreen Settings -->
+  <string name="lock_screen_title">锁屏</string>
   <!-- Current on Lockscreen -->
+  <string name="lock_screen_show_current">充电电量</string>
+  <string name="lock_screen_show_current_summary">在锁屏显示当前已充入的毫安电量</string>
   <!-- Status bar - Network traffic -->
   <!-- Network traffic -->
   <string name="network_traffic_title">网络流量</string>
@@ -101,4 +174,5 @@
   <string name="network_traffic_color_style">颜色风格</string>
   <string name="network_traffic_color_reset">重置颜色</string>
   <string name="network_traffic_color_reset_message">是否将网络流量的颜色重置为默认？</string>
+  <!-- Recents Panel -->
 </resources>

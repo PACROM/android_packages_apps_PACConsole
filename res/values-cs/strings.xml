@@ -17,23 +17,48 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- App -->
+  <string name="navigation_drawer_open">Otevřít navigační panel</string>
+  <string name="navigation_drawer_close">Zavřít navigační panel</string>
+  <string name="action_settings">Nastavení</string>
   <string name="menu_save">Uložit</string>
   <string name="menu_discard">Zahodit</string>
   <string name="menu_cancel">Zrušit</string>
   <string name="menu_ok">OK</string>
   <!-- Version Status -->
   <string name="unknown">Neznámá</string>
+  <string name="prefix_build_date">Datum sestavení: %s</string>
+  <string name="prefix_build_version">Verze: %s</string>
+  <string name="prefix_build_channel">Typ vydání: %s</string>
+  <string name="prefix_build_size">Velikost: %s</string>
+  <string name="prefix_build_md5">MD5: %s</string>
+  <string name="prefix_app_version">Verze aplikace: %s</string>
+  <string name="nav_info">Info o ROM</string>
   <!-- OTA -->
+  <string name="update_available">Aktualizace je k dispozici</string>
   <!-- Contact -->
+  <string name="nav_web">Webová stránka</string>
+  <string name="nav_gplus">Google+</string>
   <string name="nav_facebook">Facebook</string>
   <string name="nav_twitter">Twitter</string>
+  <string name="nav_instagram">Instagram</string>
+  <string name="nav_github">GitHub</string>
+  <string name="nav_gerrit">Gerrit</string>
   <!-- Navigation Menu -->
+  <string name="nav_settings_demo">Nastavení</string>
+  <string name="nav_sub_menu_demo">Podmenu</string>
   <!-- Categories -->
   <string name="clock_cat">Hodiny</string>
   <string name="general_cat">Hlavní</string>
   <string name="misc_cat">Ostatní</string>
+  <string name="battery_bar_cat">Stav baterie</string>
   <!-- Status bar Settings -->
   <string name="status_bar_title">Stavová lišta</string>
+  <string name="status_bar_toggle_brightness">Ovládání jasu</string>
+  <string name="status_bar_toggle_brightness_summary">Umožňuje měnit nastavení jasu tažením prstu po stavové liště</string>
+  <string name="status_bar_notif_count_title">Zobrazit počet upozornění</string>
+  <string name="status_bar_notif_count_summary">Zobrazí počet nezobrazených upozornění</string>
+  <string name="status_bar_quick_qs_pulldown_title">Rychlé vysunutí nabídky</string>
+  <string name="status_bar_quick_qs_pulldown_summary">%1$s okraj stavové lišty umožňuje rychlé vysunutí nabídky nastavení</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">Vlevo</string>
   <string name="status_bar_quick_qs_pulldown_summary_right">Vpravo</string>
   <string name="status_bar_quick_qs_pulldown_off">Vypnout</string>
@@ -46,19 +71,62 @@
   <string name="smart_pulldown_persistent">Žádné trvalé</string>
   <string name="smart_pulldown_all">Žádné zrušitelné nebo trvalé</string>
   <!-- Status bar - Icon blacklist -->
+  <string name="status_bar_icons_title">Ikony stavového řádku</string>
+  <string name="status_bar_icons_summary">Nastavení, které ikony jsou zobrazeny na stavové liště</string>
   <!-- Status bar - Time Contexual Header -->
+  <string name="status_bar_custom_header_title">Time Contextual Header</string>
   <string name="status_bar_custom_header_summary">Povolí vlastní obrázek na pozadí panelu upozornění</string>
   <!-- Status bar - Superuser indicator -->
+  <string name="su_indicator">Superuser indikátor</string>
+  <string name="su_indicator_summary_on">Superuser ukazatel je zobrazen, pokud je aktivní relace</string>
+  <string name="su_indicator_summary_off">Superuser ukazatel je zobrazen, když je aktivní relace</string>
   <!-- Battery Settings -->
   <string name="battery_settings_title">Baterie</string>
+  <string name="status_bar_battery_style_title">Indikátor stavu baterie</string>
+  <string name="status_bar_battery_style_icon_portrait">Ikona na výšku</string>
+  <string name="status_bar_battery_style_icon_landscape">Ikona na šířku</string>
+  <string name="status_bar_battery_style_circle">Kruh</string>
+  <string name="status_bar_battery_style_text">Text</string>
+  <string name="status_bar_battery_style_hidden">Skrytý</string>
   <!-- Battery - Battery percentage -->
+  <string name="status_bar_battery_percentage_title">Stav nabití baterie (%)</string>
+  <string name="status_bar_battery_percentage_default">Skrytý</string>
+  <string name="status_bar_battery_percentage_text_inside">Uvnitř ikony</string>
+  <string name="status_bar_battery_percentage_text_next">Vedle ikony</string>
   <!-- Battery - Battery Bar -->
+  <string name="battery_bar_title">Stav baterie</string>
+  <string name="battery_bar">Pozice indikátoru baterie</string>
+  <string name="battery_bar_hidden">Skrytý</string>
+  <string name="battery_bar_top_status_bar">Nad stavovou lištou</string>
+  <string name="battery_bar_top_nav_bar">Nad navigační lištou</string>
+  <string name="battery_bar_bottom_nav_bar">Pod navigační lištou</string>
+  <string name="battery_bar_color">Barva indikátoru baterie</string>
+  <string name="battery_bar_charging_color">Barva indikátoru baterie při nabíjení</string>
+  <string name="battery_bar_battery_low_color">Barva indikátoru baterie při vybití</string>
+  <string name="battery_bar_style_title">Zarovnání indikátoru baterie</string>
+  <string name="battery_bar_regular">Normální</string>
+  <string name="battery_bar_center_mirrored">Zrcadlově na střed</string>
+  <string name="battery_bar_reversed">Obráceně</string>
+  <string name="battery_bar_thickness_title">Tloušťka indikátoru baterie</string>
+  <string name="battery_bar_animate_title">Animace nabíjení</string>
+  <string name="battery_bar_animate_summary">Animace nabíjení může mít za následek špatné uživatelské zkušenosti. Povolení je na vlastním uvážení!</string>
+  <string name="battery_bar_use_gradient_color">Použít barvu přechodu</string>
+  <string name="battery_bar_gradient_color_summary">Použít barvu přechodu jako měřítko pro stav baterie</string>
+  <string name="battery_bar_high_color">Barva vysoké úrovně</string>
+  <string name="battery_bar_low_color">Barva nízké úrovně</string>
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="clock_setting_title">Hodiny</string>
+  <string name="status_bar_clock_style_title">Styl hodin</string>
   <string name="status_bar_clock_style_right">Vpravo</string>
   <string name="status_bar_clock_style_left">Vlevo</string>
+  <string name="status_bar_clock_style_center">Uprostřed</string>
+  <string name="status_bar_clock_style_hidden">Skrytý</string>
+  <string name="status_bar_am_pm_title">AM/PM styl</string>
+  <string name="status_bar_am_pm_info">24-hodinový formát je zapnutý</string>
   <string name="status_bar_am_pm_normal">Normalní</string>
   <string name="status_bar_am_pm_small">Malý</string>
+  <string name="status_bar_am_pm_hidden">Skrytý</string>
   <!--Clock - Date -->
   <string name="status_bar_date_title">Datum</string>
   <string name="status_bar_date_none">Skryté (výchozí)</string>
@@ -83,7 +151,10 @@
   <!-- PAC SeekbarPreference -->
   <string name="seekbar_default">Výchozí</string>
   <!-- Lockscreen Settings -->
+  <string name="lock_screen_title">Zámek displeje</string>
   <!-- Current on Lockscreen -->
+  <string name="lock_screen_show_current">Aktuální stav nabíjení</string>
+  <string name="lock_screen_show_current_summary">Ukázat stav nabíjení na zamčeném displeji</string>
   <!-- Status bar - Network traffic -->
   <!-- Network traffic -->
   <string name="network_traffic_title">Síťový provoz</string>
@@ -106,4 +177,5 @@
   <string name="network_traffic_color_style">Barevný styl</string>
   <string name="network_traffic_color_reset">Obnovit barvy</string>
   <string name="network_traffic_color_reset_message">Obnovit původní barvu indikátoru síťové aktivity?</string>
+  <!-- Recents Panel -->
 </resources>

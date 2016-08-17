@@ -53,6 +53,7 @@
   <string name="battery_settings_title">Батарея</string>
   <!-- Battery - Battery percentage -->
   <!-- Battery - Battery Bar -->
+  <!-- Changelog -->
   <!-- Clock Settings -->
   <string name="clock_setting_title">Часы</string>
   <string name="status_bar_clock_style_right">Справа</string>
@@ -106,4 +107,5 @@
   <string name="network_traffic_color_style">Цветовой стиль</string>
   <string name="network_traffic_color_reset">Сбросить цвет</string>
   <string name="network_traffic_color_reset_message">Сбросить цвет сетевого трафика?</string>
+  <!-- Recents Panel -->
 </resources>

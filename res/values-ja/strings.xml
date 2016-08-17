@@ -17,6 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- App -->
+  <string name="app_name">PACコンソール</string>
+  <string name="quagmire">Giggity Goo!</string>
   <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
   <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
   <string name="action_settings">設定</string>
@@ -39,10 +41,12 @@
   <string name="nav_web">ウェブサイト</string>
   <string name="nav_gplus">Google+</string>
   <string name="nav_facebook">Facebook</string>
+  <string name="nav_twitter">Twitter</string>
   <string name="nav_instagram">Instagram</string>
   <string name="nav_github">GitHub</string>
   <string name="nav_gerrit">Gerrit</string>
   <!-- Navigation Menu -->
+  <string name="nav_list_demo">デモ一覧</string>
   <string name="nav_settings_demo">設定</string>
   <string name="nav_sub_menu_demo">サブメニュー</string>
   <!-- Categories -->
@@ -113,6 +117,10 @@
   <string name="battery_bar_gradient_color_summary">バッテリーレベルの目盛りとしてグラデーションカラーを使用</string>
   <string name="battery_bar_high_color">高レベルの色\"</string>
   <string name="battery_bar_low_color">低レベルの色\"</string>
+  <!-- Changelog -->
+  <string name="changes_title">変更履歴</string>
+  <string name="changelog_pac_error">変更履歴を読み込めませんでした</string>
+  <string name="changelog_pac_summary">現在のビルドでの変更を確認</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">時計</string>
   <string name="status_bar_clock_style_title">時計のスタイル</string>
@@ -141,7 +149,10 @@
   <!-- Color Picker -->
   <string name="dialog_color_picker">色の選択</string>
   <string name="press_color_to_apply">色を選択して適用</string>
+  <string name="arrow_right">→</string>
+  <string name="arrow_down">↓</string>
   <string name="hex">16進数:</string>
+  <string name="hex_hint">#ff000000</string>
   <string name="set">設定</string>
   <!-- PAC SeekbarPreference -->
   <string name="seekbar_default">デフォルト</string>
@@ -172,4 +183,16 @@
   <string name="network_traffic_color_style">色のスタイル</string>
   <string name="network_traffic_color_reset">色のリセット</string>
   <string name="network_traffic_color_reset_message">ネットワーク通信量の色をデフォルトにリセットしますか？</string>
+  <!-- Recents Panel -->
+  <string name="recent_panel_title">最近使ったアプリパネル</string>
+  <string name="show_clear_all_recents_button_title">「全てを終了」ボタン</string>
+  <string name="show_clear_all_recents_button_summary">「全てを終了」ボタンを表示する</string>
+  <string name="recents_clear_all_location_title">「全てを終了」ボタンの位置</string>
+  <string name="recents_clear_all_location_top_right">右上</string>
+  <string name="recents_clear_all_location_top_left">左上</string>
+  <string name="recents_clear_all_location_top_center">中央上</string>
+  <string name="recents_clear_all_location_bottom_right">右下</string>
+  <string name="recents_clear_all_location_bottom_left">左下</string>
+  <string name="recents_clear_all_location_bottom_center">中央下</string>
+  <string name="recents_show_searchbar">最近使ったアプリメニューに検索バーを表示</string>
 </resources>
