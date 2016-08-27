@@ -186,4 +186,5 @@
   <string name="recents_clear_all_location_bottom_right">Jobb lent</string>
   <string name="recents_clear_all_location_bottom_left">Bal lent</string>
   <string name="recents_clear_all_location_bottom_center">Lent középen</string>
+  <string name="recents_show_searchbar">Keresősáv megjelenítése előzmények menüben</string>
 </resources>

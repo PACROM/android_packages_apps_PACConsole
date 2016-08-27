@@ -188,4 +188,5 @@
   <string name="recents_clear_all_location_bottom_right">Prawy dolny róg</string>
   <string name="recents_clear_all_location_bottom_left">Lewy dolny róg</string>
   <string name="recents_clear_all_location_bottom_center">Wyśrodkowany na dole</string>
+  <string name="recents_show_searchbar">Pasek wyszukiwania na ekranie ostatnich aplikacji</string>
 </resources>
