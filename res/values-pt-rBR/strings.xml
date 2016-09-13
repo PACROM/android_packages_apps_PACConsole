@@ -118,6 +118,9 @@
   <string name="battery_bar_high_color">Cor de alto nível\"</string>
   <string name="battery_bar_low_color">Cor de nível baixo\"</string>
   <!-- Changelog -->
+  <string name="changes_title">Lista de mudanças</string>
+  <string name="changelog_pac_error">Impossível carregar a lista de alterações</string>
+  <string name="changelog_pac_summary">Verifique as alterações na compilação atual</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Relógio</string>
   <string name="status_bar_clock_style_title">Estilo do relógio</string>
@@ -181,4 +184,15 @@
   <string name="network_traffic_color_reset">Redefinir a cor</string>
   <string name="network_traffic_color_reset_message">Repor as predefinições da cor de tráfego de rede?</string>
   <!-- Recents Panel -->
+  <string name="recent_panel_title">Painéis recentes</string>
+  <string name="show_clear_all_recents_button_title">Limpar todos os botões</string>
+  <string name="show_clear_all_recents_button_summary">Mostrar botão de limpar tudo</string>
+  <string name="recents_clear_all_location_title">Limpar todas as localizaçoes de botão</string>
+  <string name="recents_clear_all_location_top_right">Superior Direito</string>
+  <string name="recents_clear_all_location_top_left">Superior esquerdo</string>
+  <string name="recents_clear_all_location_top_center">Centro superior</string>
+  <string name="recents_clear_all_location_bottom_right">Botão direito</string>
+  <string name="recents_clear_all_location_bottom_left">Botão esquerdo</string>
+  <string name="recents_clear_all_location_bottom_center">Botão central</string>
+  <string name="recents_show_searchbar">Mostrar barra de pesquisa no menu recentes</string>
 </resources>

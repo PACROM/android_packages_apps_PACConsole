@@ -115,6 +115,9 @@
   <string name="battery_bar_high_color">Barva vysoké úrovně</string>
   <string name="battery_bar_low_color">Barva nízké úrovně</string>
   <!-- Changelog -->
+  <string name="changes_title">Seznam změn</string>
+  <string name="changelog_pac_error">Chyba při načítání seznamu změn</string>
+  <string name="changelog_pac_summary">Zkontrolujte změny v aktuálním sestavení</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Hodiny</string>
   <string name="status_bar_clock_style_title">Styl hodin</string>
@@ -178,4 +181,15 @@
   <string name="network_traffic_color_reset">Obnovit barvy</string>
   <string name="network_traffic_color_reset_message">Obnovit původní barvu indikátoru síťové aktivity?</string>
   <!-- Recents Panel -->
+  <string name="recent_panel_title">Panel nedávných</string>
+  <string name="show_clear_all_recents_button_title">Tlačítko Vyčistit vše</string>
+  <string name="show_clear_all_recents_button_summary">Zobrazit tlačítko \"Vyčistit vše\"</string>
+  <string name="recents_clear_all_location_title">Pozice tlačítka \"Vyčistit vše\"</string>
+  <string name="recents_clear_all_location_top_right">Vpravo nahoře</string>
+  <string name="recents_clear_all_location_top_left">Vlevo nahoře</string>
+  <string name="recents_clear_all_location_top_center">Nahoře uprostřed</string>
+  <string name="recents_clear_all_location_bottom_right">Vpravo dole</string>
+  <string name="recents_clear_all_location_bottom_left">Vlevo dole</string>
+  <string name="recents_clear_all_location_bottom_center">Dole uprostřed</string>
+  <string name="recents_show_searchbar">Zobrazit vyhledávací panel v menu nedávných</string>
 </resources>

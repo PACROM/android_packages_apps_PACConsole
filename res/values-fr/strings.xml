@@ -17,41 +17,126 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- App -->
+  <string name="app_name">Console PAC</string>
+  <string name="quagmire">Giggity Goo !</string>
+  <string name="navigation_drawer_open">Ouvrir le volet de navigation</string>
+  <string name="navigation_drawer_close">Fermer le volet de navigation</string>
+  <string name="action_settings">Paramètres</string>
   <string name="menu_save">Sauvegarder</string>
-  <string name="menu_discard">Rejeter</string>
+  <string name="menu_discard">Ignorer</string>
   <string name="menu_cancel">Annuler</string>
   <string name="menu_ok">OK</string>
   <!-- Version Status -->
   <string name="unknown">Inconnu</string>
+  <string name="prefix_build_date">Date de compilation: %s</string>
+  <string name="prefix_build_version">Version: %s</string>
+  <string name="prefix_build_channel">Type de version: %s</string>
+  <string name="prefix_build_size">Taille: %s</string>
+  <string name="prefix_build_md5">MD5 :%s</string>
+  <string name="prefix_app_version">Version de l\'application: %s</string>
+  <string name="nav_info">Information sur la Rom</string>
   <!-- OTA -->
+  <string name="update_available">Mise-à-jour disponible</string>
   <!-- Contact -->
+  <string name="nav_web">Site internet</string>
+  <string name="nav_gplus">Google+</string>
+  <string name="nav_facebook">Facebook</string>
+  <string name="nav_twitter">Twitter</string>
+  <string name="nav_instagram">Instagram</string>
+  <string name="nav_github">GitHub</string>
+  <string name="nav_gerrit">Gerrit</string>
   <!-- Navigation Menu -->
+  <string name="nav_list_demo">Demo de liste</string>
+  <string name="nav_settings_demo">Paramètres</string>
+  <string name="nav_sub_menu_demo">Sous-menu</string>
   <!-- Categories -->
+  <string name="clock_cat">Horloge</string>
+  <string name="general_cat">Général</string>
   <string name="misc_cat">Divers</string>
+  <string name="battery_bar_cat">Icône de la batterie</string>
   <!-- Status bar Settings -->
   <string name="status_bar_title">Barre d\'état</string>
+  <string name="status_bar_toggle_brightness">Réglage de la luminosité</string>
+  <string name="status_bar_toggle_brightness_summary">Ajuster la luminosité en faisant glisser votre doigt sur la barre d\'état</string>
+  <string name="status_bar_notif_count_title">Afficher le compteur de notification</string>
+  <string name="status_bar_notif_count_summary">Afficher le nombre de notifications en attente</string>
+  <string name="status_bar_quick_qs_pulldown_title">Déroulement rapide</string>
+  <string name="status_bar_quick_qs_pulldown_summary">le côté %1$s de la barre d\'état affiche les paramètres rapides</string>
   <string name="status_bar_quick_qs_pulldown_summary_left">Gauche</string>
   <string name="status_bar_quick_qs_pulldown_summary_right">Droite</string>
   <string name="status_bar_quick_qs_pulldown_off">Eteint</string>
   <string name="status_bar_quick_qs_pulldown_left">Gauche</string>
   <string name="status_bar_quick_qs_pulldown_right">Droite</string>
+  <string name="smart_pulldown_title">Menu déroulant intelligent</string>
+  <string name="smart_pulldown_summary">Ouvrir les réglages rapides quand il y a %1$s notifications présentes</string>
   <string name="smart_pulldown_off">Eteint</string>
+  <string name="smart_pulldown_dismissable">Non-effaçables</string>
+  <string name="smart_pulldown_persistent">Non-persistantes</string>
+  <string name="smart_pulldown_all">Non effaçables ou persistantes</string>
   <!-- Status bar - Icon blacklist -->
+  <string name="status_bar_icons_title">Icônes de la barre d’état</string>
+  <string name="status_bar_icons_summary">Contrôle quelles icônes de la barre d’état sont affichées</string>
   <!-- Status bar - Time Contexual Header -->
+  <string name="status_bar_custom_header_title">En-tête contextuel en fonction du temps</string>
+  <string name="status_bar_custom_header_summary">Activer l\'image d\'en-tête du panneau de notification</string>
   <!-- Status bar - Superuser indicator -->
+  <string name="su_indicator">Témoin super-utilisateur</string>
+  <string name="su_indicator_summary_on">L\'indicateur super-utilisateur est visible lorsqu’une session est active</string>
+  <string name="su_indicator_summary_off">Activer / Désactiver pour afficher l\'indicateur de super-utilisateur lorsqu\'une session est active</string>
   <!-- Battery Settings -->
+  <string name="battery_settings_title">Batterie</string>
+  <string name="status_bar_battery_style_title">Style de l\'icône de la batterie</string>
+  <string name="status_bar_battery_style_icon_portrait">Icône au format portrait</string>
+  <string name="status_bar_battery_style_icon_landscape">Icône au format paysage</string>
+  <string name="status_bar_battery_style_circle">Cercle</string>
+  <string name="status_bar_battery_style_text">Texte</string>
+  <string name="status_bar_battery_style_hidden">Masquée</string>
   <!-- Battery - Battery percentage -->
+  <string name="status_bar_battery_percentage_title">Pourcentage de la batterie</string>
+  <string name="status_bar_battery_percentage_default">Masqué</string>
+  <string name="status_bar_battery_percentage_text_inside">Dans l\'icône</string>
+  <string name="status_bar_battery_percentage_text_next">À côté de l\'icône</string>
   <!-- Battery - Battery Bar -->
+  <string name="battery_bar_title">Icône de la batterie</string>
+  <string name="battery_bar">Emplacement de la barre de batterie</string>
+  <string name="battery_bar_hidden">Masquée</string>
+  <string name="battery_bar_top_status_bar">En haut de la barre d\'état</string>
+  <string name="battery_bar_top_nav_bar">En haut de la barre de navigation</string>
+  <string name="battery_bar_bottom_nav_bar">En bas de la barre de navigation</string>
+  <string name="battery_bar_color">Couleur de la barre de batterie</string>
+  <string name="battery_bar_charging_color">Couleur de la barre de batterie durant le chargement</string>
+  <string name="battery_bar_battery_low_color">Couleur de la barre en batterie faible</string>
+  <string name="battery_bar_style_title">Alignement de la barre de batterie</string>
+  <string name="battery_bar_regular">Régulière</string>
+  <string name="battery_bar_center_mirrored">Centrée, mode miroir</string>
+  <string name="battery_bar_reversed">Inversée</string>
+  <string name="battery_bar_thickness_title">Épaisseur de la barre de batterie</string>
+  <string name="battery_bar_animate_title">Animation lors de la charge</string>
+  <string name="battery_bar_animate_summary">L\'animation de chargement peut entraîner une expérience utilisateur médiocre. Activer à votre convenance!</string>
+  <string name="battery_bar_use_gradient_color">Utiliser un dégradé de couleur</string>
+  <string name="battery_bar_gradient_color_summary">Utiliser le dégradé de couleur comme une échelle indiquant le niveau de batterie</string>
+  <string name="battery_bar_high_color">Contraste élevé des couleurs\"</string>
+  <string name="battery_bar_low_color">Faible contraste des couleurs\"</string>
   <!-- Changelog -->
+  <string name="changes_title">Historique des changements</string>
+  <string name="changelog_pac_error">Impossible de charger l\'historique des changements</string>
+  <string name="changelog_pac_summary">Cocher pour voir les changements de cette version</string>
   <!-- Clock Settings -->
+  <string name="clock_setting_title">Horloge</string>
+  <string name="status_bar_clock_style_title">Style d\'horloge</string>
   <string name="status_bar_clock_style_right">Droite</string>
   <string name="status_bar_clock_style_left">Gauche</string>
+  <string name="status_bar_clock_style_center">Centrée</string>
+  <string name="status_bar_clock_style_hidden">Masquée</string>
+  <string name="status_bar_am_pm_title">Style AM/PM</string>
+  <string name="status_bar_am_pm_info">Le format 24h est activé</string>
   <string name="status_bar_am_pm_normal">Normal</string>
   <string name="status_bar_am_pm_small">Petit</string>
+  <string name="status_bar_am_pm_hidden">Masquée</string>
   <!--Clock - Date -->
   <string name="status_bar_date_title">Date</string>
-  <string name="status_bar_date_none">Masqué (Par défaut)</string>
-  <string name="status_bar_date_small">Petit</string>
+  <string name="status_bar_date_none">Masquée (par défaut)</string>
+  <string name="status_bar_date_small">Petite</string>
   <string name="status_bar_date_normal">Normal</string>
   <string name="status_bar_date_format_title">Format de la date</string>
   <string name="status_bar_date_style">Style de la date</string>
@@ -59,22 +144,55 @@
   <string name="status_bar_date_style_lowercase">Minuscule</string>
   <string name="status_bar_date_style_uppercase">Majuscule</string>
   <string name="status_bar_date_format_custom">Format java personnalisé</string>
-  <string name="status_bar_date_string_edittext_title">Le format de date doit être par exemple: MM/jj/aa</string>
+  <string name="status_bar_date_string_edittext_title">Doit être en \"DateFormat\" ex. MM/dd/yy</string>
   <string name="status_bar_date_string_edittext_summary">Entrez la valeur</string>
   <!-- Color Picker -->
-  <string name="dialog_color_picker">Nuancier</string>
+  <string name="dialog_color_picker">Sélecteur de couleur</string>
   <string name="press_color_to_apply">Appuyez sur la couleur ci-dessous pour appliquer</string>
-  <string name="hex">Hexa:</string>
-  <string name="set">Confirmer</string>
+  <string name="arrow_right">→</string>
+  <string name="arrow_down">↓</string>
+  <string name="hex">Hex:</string>
+  <string name="hex_hint">#ff000000</string>
+  <string name="set">Appliquer</string>
   <!-- PAC SeekbarPreference -->
-  <string name="seekbar_default">Défaut</string>
+  <string name="seekbar_default">Par défaut</string>
   <!-- Lockscreen Settings -->
+  <string name="lock_screen_title">Écran de verrouillage</string>
   <!-- Current on Lockscreen -->
+  <string name="lock_screen_show_current">Courant transmis en charge</string>
+  <string name="lock_screen_show_current_summary">Afficher le niveau de courant délivré en charge sur l\'écran de verrouillage</string>
   <!-- Status bar - Network traffic -->
   <!-- Network traffic -->
-  <string name="show_network_traffic_up">Reçu(s)</string>
-  <string name="show_network_traffic_down">Entrant(s)</string>
-  <string name="network_traffic_autohide">Se cache de lui-même</string>
+  <string name="network_traffic_title">Trafic réseau</string>
+  <string name="show_network_traffic_state">Trafic réseau dans la barre d\'état</string>
+  <string name="show_network_traffic_unit">Afficher l\'unité</string>
+  <string name="show_network_traffic_frequency">Intervalle d\'actualisation</string>
+  <string name="show_network_traffic_disable">Désactivé</string>
+  <string name="show_network_traffic_up">Sortant</string>
+  <string name="show_network_traffic_down">Entrant</string>
+  <string name="show_network_traffic_all">Sortant et entrant</string>
+  <string name="show_network_traffic_bit">Bits par seconde</string>
+  <string name="show_network_traffic_byte">Octets par seconde</string>
+  <string name="show_network_traffic_500">500 ms</string>
+  <string name="show_network_traffic_1000">1000 ms</string>
+  <string name="show_network_traffic_1500">1500 ms</string>
+  <string name="show_network_traffic_2000">2000 ms</string>
+  <string name="network_traffic_autohide">Masquer automatiquement</string>
+  <string name="network_traffic_autohide_summary">Ne pas afficher l\'indicateur de vitesse de réseau lorsqu\'il n\'y a pas de trafic</string>
   <string name="network_traffic_autohide_threshold">Seuil d\'inactivité</string>
+  <string name="network_traffic_color_style">Style de couleur</string>
+  <string name="network_traffic_color_reset">Réinitialiser la couleur</string>
+  <string name="network_traffic_color_reset_message">Réinitialiser la couleur de l\'indicateur de trafic à la valeur par défaut ?</string>
   <!-- Recents Panel -->
+  <string name="recent_panel_title">Panneau d\'applications récentes</string>
+  <string name="show_clear_all_recents_button_title">Bouton \"Tout effacer\"</string>
+  <string name="show_clear_all_recents_button_summary">Afficher le bouton \"tout effacer\"</string>
+  <string name="recents_clear_all_location_title">Position du bouton \"tout effacer\"</string>
+  <string name="recents_clear_all_location_top_right">En haut à droite</string>
+  <string name="recents_clear_all_location_top_left">En haut à gauche</string>
+  <string name="recents_clear_all_location_top_center">En haut au centre</string>
+  <string name="recents_clear_all_location_bottom_right">En bas à droite</string>
+  <string name="recents_clear_all_location_bottom_left">En bas à gauche</string>
+  <string name="recents_clear_all_location_bottom_center">En bas au milieu</string>
+  <string name="recents_show_searchbar">Afficher la barre de recherche dans le menu des applications récentes</string>
 </resources>

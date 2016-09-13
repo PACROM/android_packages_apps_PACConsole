@@ -113,6 +113,9 @@
   <string name="battery_bar_high_color">Farbe bei hohem Akkustand\"</string>
   <string name="battery_bar_low_color">Farbe bei niedrigem Akkustand\"</string>
   <!-- Changelog -->
+  <string name="changes_title">Changelog</string>
+  <string name="changelog_pac_error">Changelog konnte nicht geladen werden</string>
+  <string name="changelog_pac_summary">Drücke hier um die Änderungen des aktuellen Builds zu sehen</string>
   <!-- Clock Settings -->
   <string name="clock_setting_title">Uhrzeit</string>
   <string name="status_bar_clock_style_title">Uhr Format</string>
@@ -173,4 +176,7 @@
   <string name="network_traffic_color_reset">Farbe zurücksetzen</string>
   <string name="network_traffic_color_reset_message">Netzwerkverkehrsfarbe auf die Voreinstellungen zurücksetzen?</string>
   <!-- Recents Panel -->
+  <string name="recent_panel_title">Zuletzt geöffnete Anwendungen</string>
+  <string name="show_clear_all_recents_button_title">Alle-Schließen Taste</string>
+  <string name="show_clear_all_recents_button_summary">Zeige die Alle-Schließen Taste</string>
 </resources>
